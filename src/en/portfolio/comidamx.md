@@ -23,7 +23,7 @@ The first question, then, is what does a food map mean? It can be many different
 
 The conceptualization of this work was done together with Sari Denisse, with whom I developed the portrayal of cyclical time centered on the cultivation and harvest of the milpa, and with whom I also decided on the exact orientation of the map. I then partnered for the design with the illustrator Kitzia Sámano Valencia. Working with Kitzia was an absolute pleasure, as we both enjoy focusing on nerd-level details, researching many references, and validating the designs together. She designed the food icons and the milpa with all its human and non-human characters.
 
-{% imagen "assets/images/comida_aframe.png","3D image of the map in VR simulation", "imagenIzq" %}
+{% imagen "assets/images/projects/ comida_aframe_humano.png","3D image of the map in VR simulation", "imagenIzq", "I could see this in VR and walk around. I added a human figure here to get an idea of the intended size of the map when printed"  %}
 
 This map is designed for a 4.4 m x 3.3 m wall, and that was a major challenge. It’s very difficult to imagine how something of that size will look from a monitor. To solve this problem, I turned to [A-Frame](https://aframe.io/), a tool that makes it easy to program (in HTML and JavaScript) virtual reality experiences viewable through a browser like Firefox. Using an old Oculus Quest 1, I was able to see the wall up close and from a distance, adjusting the size and position of the map elements. It also helped show the almost finished map to the people at Cencalli.
 

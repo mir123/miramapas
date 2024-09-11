@@ -20,53 +20,18 @@
     }
   ],
 
-  "siteMapHeading": "Sitemap",
-  "siteMap": [
-    {
-      "link": "about",
-      "text": "About Company"
-    },
-    {
-      "link": "portfolio",
-      "text": "Projects"
-    },
-    {
-      "link": "privacy-policy",
-      "text": "Privacy Policy"
-    },
-    {
-      "link": "terms-conditions",
-      "text": "Terms & Condition"
-    }
-  ],
-
-  "socialHeading": "Social Media",
+  "socialHeading": "Redes",
   "socialMedia": [
     {
-      "link": "#",
-      "text": "Medium"
+      "text": "Instagram",
+      "link": "https://www.instagram.com/mir.cero/"
     },
     {
-      "link": "#",
-      "text": "Behance"
-    },
-    {
-      "link": "#",
-      "text": "Dribbble"
-    },
-    {
-      "link": "#",
-      "text": "Instagram"
+      "text": "LinkedIn",
+      "link": "https://www.linkedin.com/in/mir-rodriguez/"
     }
-  ],
-
-  "brandHeading": "We help brands:",
-  "brandMotto": [
-    "develop design solutions",
-    "produce valuable cultural content",
-    "create fresh brand experience"
   ],
 
   "back2topIcon": "/assets/images/to-top.svg",
-  "customerComment": "I want to visit again"
+  "customerComment": "Arriba"
 }

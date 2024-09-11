@@ -15,8 +15,8 @@ hero:
 
 portfolio:
   subTitle: "TRABAJO RECIENTE"
-  title: "El espectro completo entre arte y educación, del escritorio al bosque"
+  title: "El espectro completo entre arte, ciencia y educación, del escritorio al bosque, de la web al papel impreso"
   seeAllbtn:
     link: "portfolio"
-    text: "MORE WORKS"
+    text: "Más trabajos"
 ---

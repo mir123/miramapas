@@ -13,31 +13,33 @@ lang: "en"
 tags: ["portfolios", "portaafolios"]
 ---
 
-Between December 2023 and June 2024, we were researching migration in Panama through the Darién jungle. Hired by an international organization, Almanaque Azul and the GeoIndígena group conducted several trips to the communities of Bajo Chiquito and Canaan in the Emberá-Wounaan Comarca to study the challenges they faced due to the situation.
+Between December 2023 and June 2024, we conducted research on migration in Panama through the Darién rainforest. My collective, Almanaque Azul, in association with GeoIndigena, was hired for this mission by the United Nations Development Programme (see credits below). From 2023 to 2024, we made several trips to the communities of Bajo Chiquito and Canaan in the Emberá-Wounaan Comarca to study the challenges they faced due to the extreme situation in which they found themselves, where thousands of people passed through their communities daily on their way to the United States.
 
 {% imagen "assets/images/migrantes_panama_ref.jpg", "Panama showing the Emberá-Wounaan Comarca", "imagenDer", "The Emberá-Wounaan Comarca" %}
 
-In 2023, over half a million people entered and exited from Colombia, crossing through what they call the "Darién Gap," heading towards Costa Rica, with almost everyone intending to reach the United States. The vast majority of those who passed through here were Venezuelans: the number skyrocketed when Mexico started requiring them to obtain a visa.
+In 2023, over half a million people left Colombia, crossing through what is known as the "Darién Gap." Their first stop, after several days of walking through the jungle, was these two communities, which are located within an autonomous indigenous territory in Panama. The vast majority of those who passed through here were Venezuelans: the number surged when Mexico began requiring them to have a visa.
 
-On average, 2,000 people arrived daily in Bajo Chiquito, and slightly fewer in Canaan. This heavily disrupted the lives of the people in those communities. The purpose of the work was to understand what was changing, what problems and opportunities the locals were facing, and at the same time, to analyze the relationship between the migrants and the locals. We interviewed dozens of migrants and humanitarian workers, and we held several meetings with community members.
+Every day, an average of 2,000 people arrived in Bajo Chiquito, and slightly fewer in Canaan. This greatly disrupted the lives of the people in these communities. The purpose of the work was to understand what was changing, what problems and opportunities the people there were facing, and at the same time, to analyze the relationship between the migrants and the locals. We interviewed dozens of migrants and humanitarian workers and held several meetings with the people of the community.
 
 {% imagen "assets/images/projects/migrantes_entrevistando.jpg", "Mir interviewing a migrant", "imagenIzq", "Interviewing a traveler at the migrant reception station in Lajas Blancas" %}
 
-What we found was an overwhelming sense of humanity and solidarity from the communities of the Emberá-Wounaan Comarca. We saw people who showed great sensitivity to a very peculiar situation. Many children, families, and individuals were fed for free; we saw how rescue teams were sent out when people were stranded in the jungle, and overall, migrants were treated very kindly.
+What we found was overwhelming humanity and solidarity from the communities in the Emberá-Wounaan Comarca. We saw people who demonstrated great sensitivity to a very unique situation. Many children, families, and individuals were fed for free; we witnessed rescue teams being sent when people were stranded in the jungle, and in general, migrants were treated with great kindness.
 
-The idea to create these maps came from the workshops we held with the people of Bajo Chiquito and Canaan. They wanted two things: for the migrants to know they had arrived in the Emberá-Wounaan Comarca in Panama and to help them orient themselves in the town and see where things were located.
+During the workshops with the people of Bajo Chiquito and Canaan, the idea came up to make a public map of the village. They wanted two things: for the migrants to know that they had arrived in the Emberá-Wounaan Comarca in Panama and to be able to orient themselves in the village and see where things were located. The idea was to print the maps on large vinyl (3 m wide) and place them in the center of each village.
 
 {% imagen "assets/images/projects/migrantes_mapa_bajo_chiquito.jpg", "Map of Bajo Chiquito", "imagenFull" %}
 
-The welcome message on the map is in Emberá, the language of the communities of Canaan and Bajo Chiquito; then in the most common languages of the migrants: Spanish, Haitian Creole, Portuguese, Somali, Hindi, Pashto, English, and Simplified Chinese.
+I drew the base map using a drone ortho-photo taken by the colleagues from GeoIndigena. During one of the visits to the communities, I recorded the key points, such as the health center, the dock where the migrants arrived, and the restaurants. With that information, I created a basic map that we later reviewed, corrected, and validated in a workshop with the community.
+
+The welcome greeting on the map is in Emberá, the language spoken in Canaan and Bajo Chiquito; then there are the most common languages of the migrants: Spanish, Haitian Creole, Portuguese, Somali, Hindi, Pashto, English, and Simplified Chinese.
 
 {% imagen "assets/images/projects/migrantes_mapa_canaan.jpg", "Map of Canaan", "imagenFull" %}
 
-Apart from the welcome, the design of the map, which was refined by our long-time colleague Marilaura Cajar, was intended to work as non-verbally as possible and to ensure that the information flowed easily to people who found themselves in a strange and difficult situation.
+Apart from serving to welcome visitors, the design of the map, which was refined by our colleague designer Marilaura Cajar, was intended to work as much as possible non-verbally so that the information could easily flow to people in a strange and difficult situation.
 
 {% imagen "assets/images/projects/migrantes_detalle_1.jpg", "Map of Canaan", "imagenFull" %}
 
-In the map of Bajo Chiquito, I follow the principle of placing the body of water at the bottom. I learned long ago in my work with participatory mapping that people living by water (river, sea, or lake) find maps more natural with the water at the bottom. This was true here as well.
+On the map of Bajo Chiquito, I followed the principle of placing the body of water at the bottom. I learned some time ago in my participatory cartography work that people living by the water (river, sea, or lake) find it more natural for the map to have the water at the bottom. This was true here as well.
 
 <div class="row"> <div class="col">
 
@@ -47,6 +49,29 @@ In the map of Bajo Chiquito, I follow the principle of placing the body of water
 
 {% imagen "assets/images/projects/migrantes_detalle_3.jpg", "Map of Canaan", "imagenFull" %}
 
-</div> </div>
+</div></div>
 
-The original idea was to print the maps in large format to place them in the center of the town so that migrants could see them upon arrival. But shortly before completing the project, a conflict arose between the international organization Médecins Sans Frontières and the Panamanian government at that time. The Minister of Foreign Affairs accused NGOs of "handing out maps" to migrants in Colombia. Suddenly, maps for migrants became a sensitive topic, and the donor decided to distribute the maps to community members in letter size.
+<small><strong>Credits:</strong> Map by Mir Rodríguez Lombardo, with design by Marilaura Cajar. Base map ortho-photos by GeoIndigena. Community workshops led by Michelle Szejner. Almanaque Azul consists of Miriam Pons, Michelle Szejner, and Mir Rodríguez Lombardo.</small>
+
+<small>Created under the initiative "Peaceful coexistence and social cohesion for local development of host communities in the Bajo Chiquito-Lajas Blancas and Canaán sections of the Emberá-Wounaan Comarca." The creation of these maps has been made possible by the support provided by the United States Government through the United States Agency for International Development (USAID), and by the technical assistance of the United Nations Development Programme in Latin America and the Caribbean (UNDP). The opinions and views presented on this webpage are the sole responsibility of the author and do not necessarily reflect the opinions or views of the agencies and organizations that supported the creation of these maps, nor those of the member countries of the United Nations.</small>
+<small> UNDP Panama Resident Representative: María Del Carmen Sacasa
+
+<small>UNDP Panama Deputy Resident Representative: Itziar González
+
+<small>UNDP Panama Team:</small>
+
+    Patricia Pérez Prieto, Governance, Peace, and Human Rights Officer
+    Nelva Araúz Reyes, Gender Specialist
+    Anibal Cárdenas-Mosquera, Head of Solutions Mapping at the Accelerator Lab
+    Betty Chemier, Head of Experimentation at the Accelerator Lab
+
+<small>UNDP Infosegura Team:</small>
+
+    Marcela Smutt, Regional Coordinator
+    Gerald Mora Muñoz, Deputy Regional Coordinator
+    Lyla Gil, Citizen Security Analyst
+    Gabriela Pérez García, Specialist in Justice and Rule of Law
+
+<small>GeoIndigena: Carlos Doviaza, Eliseo Quintero</small>
+
+<small>Fundación Almanaque Azul: Michelle Szejner, Mir Rodríguez, Miriam Pons</small>

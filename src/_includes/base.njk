@@ -164,7 +164,7 @@
                 <ul class="site-footer-widget-links">
                   {% for socialMedia in footer.socialMedia %}
                     <li>
-                      <a href="/{{socialMedia.link}}">{{socialMedia.text}}</a>
+                      <a href="{{socialMedia.link}}">{{socialMedia.text}}</a>
                     </li>
                   {% endfor %}
                 </ul>
@@ -191,17 +191,17 @@
             </div>
             <div class="col-12">
               <div class="site-footer-copyright text-center my-3">
-                <p>© Copyright 2022 - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a>
-                </p>
-              </div>
+                <p>Contenido publicado bajo diversas licencias - escribir si quieres reproducir</a>
+              </p>
             </div>
           </div>
         </div>
-      </footer>
-    {% endblock %}
-    <!-- <script src="js/vendor.js"></script> -->
-    <script src="/assets/vendor/jQuery/jquery.min.js"></script>
-    <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="/assets/js/script.js"></script>
-  </body>
+      </div>
+    </footer>
+  {% endblock %}
+  <!-- <script src="js/vendor.js"></script> -->
+  <script src="/assets/vendor/jQuery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+</body>
 </html>

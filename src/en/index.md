@@ -15,7 +15,7 @@ hero:
 
 portfolio:
   subTitle: "RECENT WORK"
-  title: "The full spectrum from art to education, desk to forest"
+  title: "The full spectrum from art to education, desk to forest, web to paper"
   seeAllbtn:
     link: "portfolio"
     text: "MORE WORKS"
