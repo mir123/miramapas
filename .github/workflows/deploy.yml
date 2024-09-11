@@ -25,6 +25,8 @@ jobs:
         run: |
           cd public_repo
           git init
+          git config --global user.email "mir123@gmail.com"
+          git config --global user.name "mir123"
           git remote add origin https://github.com/mir123/miramapas.git
           git add .
           git commit -m "Subida auto de sitio construido"
