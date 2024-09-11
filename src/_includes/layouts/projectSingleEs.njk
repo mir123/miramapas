@@ -1,0 +1,99 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+  <section class="site-project-single-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          {% imagen img,
+          "",
+          "imagenFull",
+          "" %}
+
+          {# <img src="/{{img}}" alt="project-thumb"> #}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="site-project-single">
+            <h1>
+              <div class="tituloFondo port">
+
+                <span>
+                  {{title}}
+                </span>
+
+              </div>
+            </h1>
+            <ul class="fichaTecnica">
+
+              <li>{{medio}}</li>
+              <li>{{dimensiones}}</li>
+              <li>Para: {{cliente}}</li>
+              <li>{{autor}}, {{fecha}}</li>
+            </ul>
+            <div class="site-project-single-description">
+              {{content | safe}}
+            </div>
+            {# <div class="site-project-single-image">
+              <img src="{{featureImg1}}" alt="project image">
+              <img src="{{featureImg2}}" alt="project image">
+            </div> #}
+            {% if collections.portafolios %}
+              {% set nextPost = collections.portafolios | getNextCollectionItem(page) %}
+              {% set previousPost = collections.portafolios | getPreviousCollectionItem(page) %}
+
+              <div class="site-project-single-action d-flex justify-content-between">
+                <span class="anterior">
+                  {% if previousPost %}
+                    {% if previousPost.data.lang == page.lang %}
+                      <a href="{{previousPost.url}}">
+                        <span class="link-area">
+                          {% imagen previousPost.data.img, "project-thumb", "thumb" %}
+
+                          <img class="flecha prev" src="/assets/js/openseadragon/images/previous_rest.png" alt="next project">
+
+                          {# <span data-text="{{previousPost.data.title}}">
+                      Proyecto anterior
+                    </span> #}
+                        </span>
+                      </a>
+                    {% endif %}
+
+                  {% endif %}
+                </span>
+                <span class="siguiente">
+
+                  {% if nextPost %}
+                    {% if nextPost.data.lang == page.lang %}
+
+                      {# <img src="{{nextPost.data.img}}" alt="project-thumb"> #}
+
+                      <a href="{{nextPost.url}}">
+
+                        <span class="link-area ">
+                          {# <span data-text="{{nextPost.data.title}}">
+                      Siguiente proyecto
+                    </span> #}
+                          <img class="flecha next" src="/assets/js/openseadragon/images/next_rest.png" alt="next project">
+                          {% imagen nextPost.data.img, "project-thumb", "thumb" %}
+
+                        </span>
+
+                      </a>
+
+                    {% endif %}
+
+                  {% endif %}
+                </span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

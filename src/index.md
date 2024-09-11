@@ -1,19 +1,20 @@
 ---
 layout: "layouts/homepage.njk"
+lang: es
 hero:
-  subTitle: "WE WORK HARD, WE PLAY HARD"
+  subTitle: ""
   title:
-    firstPara: "We’re a Design Studio"
-    secondPara: "That Believes In Great Ideas"
+    firstPara: "HAGO MAPAS"
+    secondPara: "para contar historias"
   seeWorkBtn:
-    text: "See Our Works"
+    text: "Trabajo"
     link: "#project"
-  connectBtn: 
-    text: "Connect with us"
+  connectBtn:
+    text: "Contacto"
     link: "contact"
 
 portfolio:
-  subTitle: "OUR RECENT WORKS"
+  subTitle: "TRABAJO RECIENTE"
   title: "Crafting experiences and seeking to make the complex clear & beautiful."
   seeAllbtn:
     link: "portfolio"

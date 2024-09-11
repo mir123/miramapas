@@ -1,0 +1,10 @@
+{
+  "lang": "en",
+  "navLogo": "/assets/images/logo.png",
+  "navLinks": [
+    ["me", "yo"],
+    ["portfolio", "portafolio"]
+  ],
+  "navBtnLink": "contact",
+  "navBtnText": "Get in touch"
+}
