@@ -1,0 +1,27 @@
+name: Subir mi sitio al repositorio público
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy to Public Repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git clone --depth=1 https://github.com/mir123/miramapas.git out
+          rsync -av --delete docs/ out/
+          cd out
+          git add .
+          git commit -m "Subida auto de sitio construido"
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}
