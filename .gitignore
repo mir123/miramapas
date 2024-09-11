@@ -1,6 +1,9 @@
 node_modules
 _site
 dist
-assets/images/comida_files
-assets/images/pacifico_files
-assets/images/centroamerica_files
+mosaicos/comida_files
+mosaicos/pacifico_files
+mosaicos/centroamerica_files
+docs/mosaicos/comida_files
+docs/mosaicos/pacifico_files
+docs/mosaicos/centroamerica_files

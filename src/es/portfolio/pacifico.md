@@ -24,7 +24,7 @@ Para explicar el Pacífico en un mapa una de las cosas que acordamos fue mostrar
     var viewer = OpenSeadragon({
         id: "pacificoMapaZoom",
         prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/assets/images/pacifico.dzi",
+        tileSources: "/mosaicos/pacifico.dzi",
             visibilityRatio: 1.0,
 
         defaultZoomLevel: 	1,

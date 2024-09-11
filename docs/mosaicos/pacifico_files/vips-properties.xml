@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<image xmlns="http://www.vips.ecs.soton.ac.uk//dzsave" date="2024-08-23T17:14:43.091338-06" version="8.15.1">
+  <properties>
+    <property>
+      <name>width</name>
+      <value type="gint">23622</value>
+    </property>
+    <property>
+      <name>height</name>
+      <value type="gint">24803</value>
+    </property>
+    <property>
+      <name>bands</name>
+      <value type="gint">4</value>
+    </property>
+    <property>
+      <name>xoffset</name>
+      <value type="gint">0</value>
+    </property>
+    <property>
+      <name>yoffset</name>
+      <value type="gint">0</value>
+    </property>
+    <property>
+      <name>xres</name>
+      <value type="gdouble">11.811</value>
+    </property>
+    <property>
+      <name>yres</name>
+      <value type="gdouble">11.811</value>
+    </property>
+    <property>
+      <name>vips-loader</name>
+      <value type="VipsRefString">pngload</value>
+    </property>
+    <property>
+      <name>png-comment-0-Software</name>
+      <value type="VipsRefString">www.inkscape.org</value>
+    </property>
+    <property>
+      <name>png-comment-1-Author</name>
+      <value type="VipsRefString">mir</value>
+    </property>
+    <property>
+      <name>png-comment-2-Creation Time</name>
+      <value type="VipsRefString">2024-04-06T11:34:13</value>
+    </property>
+    <property>
+      <name>bits-per-sample</name>
+      <value type="gint">8</value>
+    </property>
+    <property>
+      <name>vips-sequential</name>
+      <value type="gint">1</value>
+    </property>
+  </properties>
+</image>

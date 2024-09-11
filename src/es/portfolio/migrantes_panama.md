@@ -3,8 +3,8 @@ subTitle: "Panamá - Comarca Emberá-Wounaan"
 title: "Mapas para migrantes"
 date: 2024-03-01
 autor: "Mir Rodríguez Lombardo con Almanaque Azul y GeoIndigena"
-medio: "Papel"
-dimensiones: "Originalmente, 3 m × 1.8 m; finalmente, tamaño carta"
+medio: "Impresión en vinil"
+dimensiones: "3 m × 1.8 m"
 cliente: "Almanaque Azul"
 fecha: "mayo de 2024"
 img: "assets/images/projects/migrantes_570.jpg"
@@ -12,7 +12,7 @@ linkText: "ver proyecto"
 lang: "es"
 ---
 
-Entre diciembre de 2023 y junio de 2024 estuvimos investigando la migración en Panamá a través del bosque del Darién. Mi colectivo, Almanaque Azul, en asociación con GeoIndigena, fuimos contratados para esa misión por el Programa de las Naciones Unidas para el Desarrollo. Entre 2023 y 2024 hicimos varias giras a las comunidades de Bajo Chiquito y Canaan, en la Comarca Emberá-Wounaan, para estudiar los retos a los que se enfrentaban ante la situación extrema en la que se encontraban, donde miles de personas pasaban diariamente por sus comunidades en su camino hacia Estados Unidos.
+Entre diciembre de 2023 y junio de 2024 estuvimos investigando la migración en Panamá a través del bosque del Darién. Mi colectivo, Almanaque Azul, en asociación con GeoIndigena, fuimos contratados para esa misión por el Programa de las Naciones Unidas para el Desarrollo (ver créditos abajo). Entre 2023 y 2024 hicimos varias giras a las comunidades de Bajo Chiquito y Canaan, en la Comarca Emberá-Wounaan, para estudiar los retos a los que se enfrentaban ante la situación extrema en la que se encontraban, donde miles de personas pasaban diariamente por sus comunidades en su camino hacia Estados Unidos.
 
 {% imagen "assets/images/migrantes_panama_ref.jpg", "Panamá mostrando la Comarca Emberá-Wounaan", "imagenDer", "La Comarca Emberá-Wounaan" %}
 
@@ -24,7 +24,7 @@ Cada día llegaban en promedio 2,000 personas a Bajo Chiquito y unos cuantos men
 
 Lo que encontramos fue una abrumadora humanidad y solidaridad por parte de las comunidades de la Comarca Emberá-Wounaan. Vimos gente que demostró una gran sensibilidad ante una situación muy peculiar. Muchos niños, niñas y familias eran alimentados gratis; vimos cómo enviaban equipos de rescate cuando había gente que se quedaba en la selva y, en general, los migrantes eran tratados de manera muy amable.
 
-La idea de hacer estos mapas salió de los talleres que hicimos con la gente de Bajo Chiquito y de Canaan. Querían dos cosas: que los migrantes supieran que habían llegado a la Comarca Emberá-Wounaan en Panamá y que se pudieran orientar en el pueblo y ver dónde estaban las cosas.
+En los talleres con la gente de Bajo Chiquito y de Canaan surgió la idea de hacer un mapa público del pueblo. Querían dos cosas: que los migrantes supieran que habían llegado a la Comarca Emberá-Wounaan en Panamá y que se pudieran orientar en el pueblo y ver dónde estaban las cosas. La idea fue imprimir los mapas en vinilo grande (3 m de ancho) y ponerlos en el centro de cada pueblo.
 
 {% imagen "assets/images/projects/migrantes_mapa_bajo_chiquito.jpg", "Mapa de Bajo Chiquito", "imagenFull" %}
 
@@ -34,7 +34,7 @@ El saludo de bienvenida en el mapa está en emberá, que es lo que se habla en C
 
 {% imagen "assets/images/projects/migrantes_mapa_canaan.jpg", "Mapa de Canaan", "imagenFull" %}
 
-Aparte de servir para darles la bienvenida a los visitantes, el diseño del mapa, que fue refinado por nuestra colega de muchos años Marilaura Cajar, estaba pensado para que funcionara lo más posible de manera no verbal y que la información fluyera fácilmente a personas que se encontraban en una situación extraña y difícil.
+Aparte de servir para darles la bienvenida a los visitantes, el diseño del mapa, que fue refinado por nuestra colega diseñadora Marilaura Cajar, estaba pensado para que funcionara lo más posible de manera no verbal y que la información fluyera fácilmente a personas que se encontraban en una situación extraña y difícil.
 
 {% imagen "assets/images/projects/migrantes_detalle_1.jpg", "Mapa de Canaan", "imagenFull" %}
 
@@ -50,4 +50,29 @@ En el mapa de Bajo Chiquito sigo el principio de colocar el cuerpo de agua hacia
 
 </div></div>
 
-La idea original era imprimir los mapas en grande para ponerlos en el centro del pueblo y que los pudieran ver los migrantes al llegar. Pero, poco antes de terminar el proyecto, surgió un conflicto entre la organización internacional Médicos Sin Fronteras y el gobierno de Panamá en ese entonces. La ministra de Relaciones Exteriores acusó a las ONG de "entregar mapas" a los migrantes en Colombia. De repente, los mapas para migrantes se convirtieron en un tema delicado y el donante decidió repartir los mapas a las personas de la comunidad en tamaño carta.
+<small><strong>Créditos:</strong> Mapa por Mir Rodríguez Lombardo, con diseño de Marilaura Cajar. Ortofotos para base de mapa por GeoIndigena. Talleres comunitarios dirigidos por Michelle Szejner. Almanaque Azul son Miriam Pons, Michelle Szejner y Mir Rodríguez Lombardo.</small>
+
+<small>Elaborado bajo la iniciativa "Convivencia pacífica y cohesión social para el desarrollo local de comunidades de acogida en los tramos Bajo Chiquito-Lajas Blancas y Canaán de la Comarca Emberá Wounaan". La elaboración de estos mapas ha sido posible gracias al apoyo brindado por el Gobierno de los Estados Unidos por medio de la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID, por sus siglas en inglés), y a la asistencia técnica del Programa de las Naciones Unidas para el Desarrollo en América Latina y el Caribe (PNUD). Las opiniones y los puntos de vista que se presentan en esta página web son de exclusiva responsabilidad de su autor y no reflejan necesariamente las opiniones ni los puntos de vista de las agencias y los organismos que apoyaron la realización de estos mapas, ni tampoco aquellos de los países miembros de las Naciones Unidas.</small>
+
+<small>
+Representante Residente PNUD Panamá: María Del Carmen Sacasa
+
+<small>Representante Residente Adjunta PNUD Panamá: Itziar González
+
+<small>Equipo de trabajo de PNUD Panamá:</small>
+
+- Patricia Pérez Prieto, Oficial de Gobernabilidad, Paz y Derechos Humanos
+- Nelva Araúz Reyes, Especialista de Género
+- Anibal Cárdenas - Mosquera, Jefe de Mapeo de Soluciones del Laboratorio de Aceleración
+- Betty Chemier, Jefa de Experimentación del Laboratorio de Aceleración
+
+<small>Equipo de trabajo de PNUD Infosegura:</small>
+
+- Marcela Smutt, Coordinadora Regional
+- Gerald Mora Muñoz, Coordinador Regional Adjunto
+- Lyla Gil, Analista en Seguridad Ciudadana
+- Gabriela Pérez García, Especialista en temas de Justicia y Estado de Derecho
+
+<small>Geoindigena: Carlos Doviaza, Eliseo Quintero</small>
+
+<small>Fundación Almanaque Azul: Michelle Szejner, Mir Rodríguez, Miriam Pons</small>

@@ -10,18 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkoutear repositorio
         uses: actions/checkout@v3
+        with:
+          sparse-checkout: |
+            docs
 
-      - name: Deploy to Public Repo
+      - name: Copiar docs al directorio para subir
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git clone --depth=1 https://github.com/mir123/miramapas.git out
-          rsync -av --delete docs/ out/
-          cd out
+          mkdir public_repo
+          cp -r docs/* public_repo/
+
+      - name: Inicializar y empujar al repo público
+        run: |
+          cd public_repo
+          git init
+          git remote add origin https://github.com/mir123/miramapas.git
           git add .
           git commit -m "Subida auto de sitio construido"
-          git push origin main
+          git push --force origin main
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_REPO_TOKEN }}

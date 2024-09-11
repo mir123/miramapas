@@ -43,7 +43,7 @@ Hasta la fecha este mapa no ha sido impreso, así que este portafolio es la prim
     var viewer = OpenSeadragon({
         id: "comidaMapaZoom",
         prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/assets/images/comida.dzi",
+        tileSources: "/mosaicos/comida.dzi",
             // visibilityRatio: 1.0,
 
         defaultZoomLevel: 	0,

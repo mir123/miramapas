@@ -32,7 +32,7 @@ Queríamos que el mapa fuera bonito e incluyera el calor del trabajo hecho a man
     var viewer = OpenSeadragon({
         id: "centroamericaMapaZoom",
         prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/assets/images/centroamerica.dzi",
+        tileSources: "/mosaicos/centroamerica.dzi",
             visibilityRatio: 1.0,
 
         defaultZoomLevel: 	1,
