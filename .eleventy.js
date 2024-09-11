@@ -274,6 +274,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.setUseGitIgnore(false);
 
+  eleventyConfig.addPassthroughCopy("assets/css");
   eleventyConfig.addWatchTarget("assets/css");
 
   // eleventyConfig.watchIgnores.add("/assets/images/comida_files");
