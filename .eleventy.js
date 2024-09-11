@@ -85,7 +85,7 @@ const imageShortcode = async (
   const imageMetadata = await Image(src, {
     widths: [...widths, null],
     formats: [...formats, null],
-    outputDir: "_site/assets/images",
+    outputDir: "docs/assets/images",
     urlPath: "/assets/images",
     cacheOptions: {
       duration: "1d", // Cache duration
@@ -274,7 +274,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addPassthroughCopy("assets/css");
+  eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addWatchTarget("assets/css");
 
   // eleventyConfig.watchIgnores.add("/assets/images/comida_files");
