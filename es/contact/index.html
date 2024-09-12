@@ -89,7 +89,14 @@
     
 
     
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG"></script>
+  <script>
+    function onSubmit(token) {
+      document
+        .getElementById("escribeme")
+        .submit();
+    }
+  </script>
   <section class="site-contact">
     <div class="container">
       <div class="row">
@@ -123,9 +130,9 @@
                 <textarea class="form-control" name="mensaje" id="aboutProject" rows="6" placeholder="Explícame qué tienes en mente"></textarea>
               </div>
               <div class="col-12">
-                <div class="g-recaptcha" data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG"></div>
+
                 <br/>
-                <button type="submit" class="btn btn-primary" formtarget="_blank">
+                <button data-callback='onSubmit' data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG" data-action='submit' type="submit" class="btn btn-primary" formtarget="_blank">
                   <span class="btn-area">
                     <span data-text="Enviar mensaje">
                       Enviar mensaje
@@ -135,10 +142,7 @@
               </div>
             </div>
           </form>
-          <p class="contact-form-generator mt-3">
-            <strong>** </strong>
-            <a href="https://fabform.io/" target="_blank">Static website forms</a>
-          </p>
+
         </div>
       </div>
     </div>
