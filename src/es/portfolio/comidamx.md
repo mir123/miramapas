@@ -20,7 +20,7 @@ Este mapa fue idea que surgió de Genoveva de la Peña, que en ese entonces era 
 
 La primera pregunta entonces es ¿qué significa mapa de comida? Pueden ser muchas cosas diferentes. De la mano de Alexander Ortega Sepúlveda, experto en cocinas indigenas de México, decidimos que el mapa sería de los ingredientes ancestrales que seguimos comiendo en este territorio y de dónde se cultivan. Esto dejó por fuera cosas como el plátano, el limón y el arroz, que se cultivan y se comen mucho aquí, pero que no son originarios de este lugar. Alexander, en consulta con Cencalli, decidió la lista final de "alimentos esenciales"
 
-{% imgIzq %}bosquejo_mapa_comida.jpg{% endimgIzq %}
+{% imagen "assets/images/projects/bosquejo_mapa_comida.jpg","Bosquejo del mapa de comida", "imagenIzq" %}
 
 La conceptualización de este trabajo la hice junto a Sari Denisse, con la que ideamos el retrato del tiempo cíclico centrado en el cultivo y cosecha de la milpa, y con quien también decidí el giro exacto del mapa. Luego me asocié para el diseño con la ilustradora Kitzia Sámano Valencia. Trabajar con Kitzia fue un placer total, ya que a ambos nos gusta fijarnos en detalles a escala nerd, buscando muchas referencias y validando los diseños entre ambos. Ella diseñó los íconos de las comidas y la milpa con todos sus personajes humanos y no humanos.
 

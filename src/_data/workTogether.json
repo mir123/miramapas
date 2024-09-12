@@ -1,11 +1,24 @@
 {
-  "heading": "VAMOS A INVENTAR ALGO JUNTXS",
-  "submitBtn": {
-    "btnText": "Escríbeme",
-    "btnLink": "contact"
+  "en": {
+    "heading": "LET'S DO SOMETHING TOGETHER",
+    "submitBtn": {
+      "btnText": "Write to me",
+      "btnLink": "contact"
+    },
+    "convBtn": {
+      "btnText": "I want to see more",
+      "btnLink": "portfolio"
+    }
   },
-  "convBtn": {
-    "btnText": "Quiero ver más",
-    "btnLink": "portafolio"
+  "es": {
+    "heading": "VAMOS A INVENTAR ALGO JUNTXS",
+    "submitBtn": {
+      "btnText": "Escríbeme",
+      "btnLink": "contact"
+    },
+    "convBtn": {
+      "btnText": "Quiero ver más",
+      "btnLink": "portafolio"
+    }
   }
 }

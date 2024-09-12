@@ -10,7 +10,6 @@ fecha: "May 2024"
 img: "assets/images/projects/migrantes_570.jpg"
 linkText: "see project"
 lang: "en"
-tags: ["portfolios", "portaafolios"]
 ---
 
 Between December 2023 and June 2024, we conducted research on migration in Panama through the Darién rainforest. My collective, Almanaque Azul, in association with GeoIndigena, was hired for this mission by the United Nations Development Programme (see credits below). From 2023 to 2024, we made several trips to the communities of Bajo Chiquito and Canaan in the Emberá-Wounaan Comarca to study the challenges they faced due to the extreme situation in which they found themselves, where thousands of people passed through their communities daily on their way to the United States.

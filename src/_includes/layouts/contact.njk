@@ -1,7 +1,7 @@
 {% extends "base.njk" %}
 
 {% block content %}
-
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <section class="site-contact">
     <div class="container">
       <div class="row">
@@ -14,25 +14,28 @@
         <div class="col-lg-6 ml-auto">
           <div class="site-contact-form">
             <h4>{{formTitle}}</h4>
-            <form method="POST" action="https://fabform.io/f/ulB_j_f">
+            <form method="POST" action="https://formspree.io/f/mgvwbolw">
+              <input name="subject" type="hidden" value="Message from Miramapas"/>
               <div class="row">
                 <div class="col-lg-6">
-                  <input type="text" class="form-control" name="first-name" id="first-name" placeholder="Nombre">
+                  <input type="text" class="form-control" name="first-name" id="first-name" placeholder="Name">
                 </div>
                 <div class="col-lg-6">
-                  <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Apellido">
+                  <input type="text" class="form-control" name="last-name" id="last-name" placeholder="Last Name">
                 </div>
                 <div class="col-lg-6">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Email">
                 </div>
                 <div class="col-lg-6">
-                  <input type="tel" class="form-control" name="tel" id="tel" placeholder="Teléfono">
+                  <input type="tel" class="form-control" name="tel" id="tel" placeholder="Tel">
                 </div>
               </div>
               <div class="col-12">
-                <textarea class="form-control" id="aboutProject" rows="6" placeholder="Cuéntame sobre tu proyecto"></textarea>
+                <textarea class="form-control" name="mensaje" id="aboutProject" rows="6" placeholder="What do you have in mind?"></textarea>
               </div>
               <div class="col-12">
+                <div class="g-recaptcha" data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG"></div>
+                <br/>
                 <button type="submit" class="btn btn-primary" formtarget="_blank">
                   <span class="btn-area">
                     <span data-text="{{btnText}}">

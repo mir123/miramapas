@@ -1,13 +1,13 @@
 {% extends "base.njk" %}
 
 {% block content %}
-  <section class="site-project-header">
+  {# <section class="site-project-header">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-8">
           <div class="site-project-header-content">
             <h1>
-              {{ content | safe}}
+              {{ content | safe}} 
             </h1>
           </div>
         </div>
@@ -19,31 +19,33 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> #}
 
   <section class="site-project" id="project">
     <div class="container">
       <div class="row">
 
-        {% for portfolio in collections.portfolios | reverse %}
+        {% for trabajo in collections.works | reverse %}
 
-          {# {% if portfolio.data.lang == page.lang %} #}
+          {# {% if trabajo.data.lang == page.lang %} #}
           <div class="col-lg-6 col-md-10 mx-auto">
-            <div class="site-project-item">
-              <div class="site-project-item-thumb">
+            <a href="{{trabajo.url}}" class="read-more">
+              <div class="site-project-item">
+                <div class="site-project-item-thumb">
 
-                {% imagen portfolio.data.img,
-          "project-thumb",
-          "imagenFull",
-          "" %}
-                {# <img src="/{{portfolio.data.img}}" alt="project-thumb"> #}
+                  {% imagen trabajo.data.img,
+                "project-thumb",
+                "imagenFull",
+                "" %}
+                  {# <img src="/{{trabajo.data.img}}" alt="project-thumb"> #}
+                </div>
+                <div class="site-project-item-content">
+                  <span>{{trabajo.data.subTitle}}</span>
+                  <h3>{{trabajo.data.title}}</h3>
+
+                </div>
               </div>
-              <div class="site-project-item-content">
-                <span>{{portfolio.data.subTitle}}</span>
-                <h3>{{portfolio.data.title}}</h3>
-                <a href="{{portfolio.url}}" class="read-more">{{portfolio.data.linkText}}</a>
-              </div>
-            </div>
+            </a>
           </div>
           {# {% endif %} #}
         {% endfor %}

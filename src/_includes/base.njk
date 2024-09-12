@@ -2,7 +2,7 @@
 <html lang="{{lang}}">
   <head>
     <meta charset="utf-8"/>
-    <title>{{ title }} | Gruinneo | Cartografía creativa</title>
+    <title>{{ title }} | miramapas</title>
     <meta name="generator" content="Eleventy">
     <!--Meta For No Index-->
     <meta name="robots" content="noindex, Nofollow, Noimageindex">
@@ -37,7 +37,7 @@
       <nav class="navbar navbar-expand-lg site-navigation" id="navbar">
         <div class="container">
           <a class="navbar-brand" href="/{{ page.lang }}">
-            <img src="{{navLogo}}" id="navLogo" alt="nav-logo"/>
+            <img src="{{ navLogo }}" id="navLogo" alt="nav-logo"/>
           </a>
           <button
           class="navbar-toggler collapsed"
@@ -67,8 +67,8 @@
 
                 {% for link in page.url | locale_links %}
 
-                  <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="{{link.url}}">
-                    <span class="btn-area">
+                  <a  class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="{{link.url}}">
+                    <span id="botonLenguaje" data-lang="{{link.lang}}" class="btn-area">
                       <span data-text="{{link.label}}">
                         {{link.label}}
                       </span>
@@ -87,26 +87,33 @@
     {% endblock %}
 
     {% block workTogether %}
+
+      {% if lang == "es" %}
+        {% set textosWorkTogether = workTogether.es %}
+      {% else %}
+        {% set textosWorkTogether = workTogether.en %}
+      {% endif %}
+
       <section class="site-cta">
         <div class="container">
           <div class="row">
             <div class="col-12 text-center">
-              <h1 class="site-cta-title">{{workTogether.heading}}</h1>
+              <h1 class="site-cta-title">{{textosWorkTogether.heading}}</h1>
               <ul class="site-cta-buttons">
                 <li>
-                  <a href="/{{ page.lang }}/{{workTogether.submitBtn.btnLink}}" class="btn btn-secondary">
+                  <a href="/{{ page.lang }}/{{textosWorkTogether.submitBtn.btnLink}}" class="btn btn-secondary">
                     <span class="btn-area">
-                      <span data-text="{{workTogether.submitBtn.btnText}}">
-                        {{workTogether.submitBtn.btnText}}
+                      <span data-text="{{textosWorkTogether.submitBtn.btnText}}">
+                        {{textosWorkTogether.submitBtn.btnText}}
                       </span>
                     </span>
                   </a>
                 </li>
                 <li>
-                  <a href="/{{ page.lang }}/{{workTogether.convBtn.btnLink}}" class="btn btn-primary">
+                  <a href="/{{ page.lang }}/{{textosWorkTogether.convBtn.btnLink}}" class="btn btn-primary">
                     <span class="btn-area">
-                      <span data-text="{{workTogether.convBtn.btnText}}">
-                        {{workTogether.convBtn.btnText}}
+                      <span data-text="{{textosWorkTogether.convBtn.btnText}}">
+                        {{textosWorkTogether.convBtn.btnText}}
                       </span>
                     </span>
                   </a>

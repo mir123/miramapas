@@ -72,7 +72,14 @@
             <p>{{portfolio.title}}</p>
           </div>
         </div>
-        {% for portfolio in collections.portafolios | reverse %}
+
+        {% if lang == "es" %}
+          {% set trabajos = collections.portafolios %}
+        {% else %}
+          {% set trabajos = collections.works %}
+        {% endif %}
+
+        {% for portfolio in trabajos | reverse %}
           {% if portfolio.data.lang == page.lang %}
 
             <div class="col-lg-6 col-md-10 mx-auto">

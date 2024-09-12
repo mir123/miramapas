@@ -42,11 +42,13 @@
               <img src="{{featureImg1}}" alt="project image">
               <img src="{{featureImg2}}" alt="project image">
             </div> #}
-            {% if collections.portafolios %}
+            {% if collections.works %}
 
-              {% set previousPost = collections.portafolios | getPreviousCollectionItem %}
+              {% set previousPost = collections.works | getPreviousCollectionItem %}
 
-              {% set nextPost = collections.portafolios | getNextCollectionItem %}
+              {% set nextPost = collections.works | getNextCollectionItem %}
+
+              {{ collections.works | getPreviousCollectionItem }}
 
               <div class="site-project-single-action d-flex justify-content-between">
                 <span class="anterior">

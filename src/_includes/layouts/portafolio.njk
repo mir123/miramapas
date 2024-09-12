@@ -7,13 +7,13 @@
         <div class="col-lg-8">
           <div class="site-project-header-content">
             <h1>
-              {{ content | safe}}
+              {{ content | safe}} 
             </h1>
           </div>
         </div>
         <div class="col-lg-4">
           <a href="#project" class="site-project-header-action scroll-to">
-            <span>Scroll Down</span>
+            <span>Bajaa Down</span>
             <img src="/assets/images/arrow-down.svg" alt="arrow-down">
           </a>
         </div>
@@ -24,28 +24,30 @@
   <section class="site-project" id="project">
     <div class="container">
       <div class="row">
-        {% for portfolio in collections.portafolios | reverse %}
 
-          {% if portfolio.data.lang == page.lang %}
-            <div class="col-lg-6 col-md-10 mx-auto">
+        {% for trabajo in collections.portafolios | reverse %}
+
+          {# {% if trabajo.data.lang == page.lang %} #}
+          <div class="col-lg-6 col-md-10 mx-auto">
+            <a href="{{trabajo.url}}" class="read-more">
               <div class="site-project-item">
-                <a href="{{portfolio.url}}" class="read-more">
-                  <div class="site-project-item-thumb">
-                    {% imagen portfolio.data.img,
-                    "project-thumb",
-                    "imagenFull",
-                    "" %}
-                    {# <img src="/{{portfolio.data.img}}" alt="project-thumb"> #}
-                  </div>
-                  <div class="site-project-item-content">
-                    <span>{{portfolio.data.subTitle}}</span>
-                    <h3>{{portfolio.data.title}}</h3>
-                    {{portfolio.data.linkText}}
-                  </div>
-                </a>
+                <div class="site-project-item-thumb">
+
+                  {% imagen trabajo.data.img,
+                "project-thumb",
+                "imagenFull",
+                "" %}
+                  {# <img src="/{{trabajo.data.img}}" alt="project-thumb"> #}
+                </div>
+                <div class="site-project-item-content">
+                  <span>{{trabajo.data.subTitle}}</span>
+                  <h3>{{trabajo.data.title}}</h3>
+
+                </div>
               </div>
-            </div>
-          {% endif %}
+            </a>
+          </div>
+          {# {% endif %} #}
         {% endfor %}
 
       </div>

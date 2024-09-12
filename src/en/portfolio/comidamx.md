@@ -10,7 +10,6 @@ fecha: "November 2022"
 img: "assets/images/projects/mapa_comida_mexico_570.jpg"
 linkText: "see project"
 lang: "en"
-tags: ["portfolios", "portaafolios"]
 ---
 
   <script src="/assets/js/openseadragon/openseadragon.min.js"></script>
@@ -19,11 +18,11 @@ This map was an idea that came from Genoveva de la Peña, who at that time was t
 
 The first question, then, is what does a food map mean? It can be many different things. Together with Alexander Ortega Sepúlveda, an expert in Indigenous cuisines of Mexico, we decided that the map would feature ancestral ingredients that are still eaten in this territory and where they are cultivated. This left out items like bananas, lemons, and rice, which are widely cultivated and consumed here but are not native to this place. Alexander, in consultation with Cencalli, decided on the final list of "essential foods."
 
-{% imgIzq %}bosquejo_mapa_comida.jpg{% endimgIzq %}
+{% imagen "assets/images/projects/bosquejo_mapa_comida.jpg","Sketch of the food map", "imagenIzq" %}
 
 The conceptualization of this work was done together with Sari Denisse, with whom I developed the portrayal of cyclical time centered on the cultivation and harvest of the milpa, and with whom I also decided on the exact orientation of the map. I then partnered for the design with the illustrator Kitzia Sámano Valencia. Working with Kitzia was an absolute pleasure, as we both enjoy focusing on nerd-level details, researching many references, and validating the designs together. She designed the food icons and the milpa with all its human and non-human characters.
 
-{% imagen "assets/images/projects/ comida_aframe_humano.png","3D image of the map in VR simulation", "imagenIzq", "I could see this in VR and walk around. I added a human figure here to get an idea of the intended size of the map when printed"  %}
+{% imagen "assets/images/projects/comida_aframe_humano.png","3D image of the map in VR simulation", "imagenIzq", "I could see this in VR and walk around. I added a human figure here to get an idea of the intended size of the map when printed"  %}
 
 This map is designed for a 4.4 m x 3.3 m wall, and that was a major challenge. It’s very difficult to imagine how something of that size will look from a monitor. To solve this problem, I turned to [A-Frame](https://aframe.io/), a tool that makes it easy to program (in HTML and JavaScript) virtual reality experiences viewable through a browser like Firefox. Using an old Oculus Quest 1, I was able to see the wall up close and from a distance, adjusting the size and position of the map elements. It also helped show the almost finished map to the people at Cencalli.
 
@@ -42,7 +41,7 @@ To date, this map has not been printed, so this portfolio is the first time it h
     var viewer = OpenSeadragon({
         id: "comidaMapaZoom",
         prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/assets/images/comida.dzi",
+        tileSources: "/mosaicos/comida.dzi",
             // visibilityRatio: 1.0,
 
         defaultZoomLevel: 	0,

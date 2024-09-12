@@ -1,7 +1,5 @@
 ---
-tags: ["portfolios", "portaafolios"]
-
-subTitle: "COLOMBIA"
+subTitle: "Colombia"
 title: "From the Pacific"
 date: 2024-04-01
 autor: "Mir Rodríguez Lombardo"
@@ -28,7 +26,7 @@ To explain the Pacific on a map, one of the things we agreed upon was to show th
     var viewer = OpenSeadragon({
         id: "pacificoMapaZoom",
         prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/assets/images/pacifico.dzi",
+        tileSources: "/mosaicos/pacifico.dzi",
             visibilityRatio: 1.0,
 
         defaultZoomLevel: 	1,
@@ -50,4 +48,4 @@ It was fantastic to be able to contribute to Yolanda's vision and to have had th
 
 > This map talks about the Colombian and Panamanian territories from the point of view of the Pacific. I've noticed that those of us who grew up near water prefer to see maps with the sea (or the river) at the bottom and the town at the top. This is a more important and realistic reference than the north. That's why this map is oriented in that way. The land is represented with its watersheds, the landforms that capture water that falls or flows underground and channel it to creeks and rivers. Indigenous and Afro-descendant territories are part of a finer texture that requires closer examination. Just like streams, communities are a fundamental part of the territory's fabric, even if cities might seem more prominent. The attempt to map the threads woven into the land is merely an approximation. Only the people who live there truly know them, and it is their maps that tell the real stories of these territories.
 
-{% imgMed  %}pacifico_foto_museo.jpg{% endimgMed %}
+{% imagen "assets/images/projects/pacifico_foto_museo.jpg","El mapa en la expo", "imagenFull" %}

@@ -2,78 +2,6 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const Image = require("@11ty/eleventy-img");
 const outdent = require("outdent");
 
-// const imageShortcode = async (
-//   src,
-//   alt,
-//   className = "imagenMediana",
-//   widths = [200, 300, 450, 600, 800, 1200],
-//   formats = ["webp", "jpeg"],
-//   //sizes = "10vw"
-//   sizes = "(min-width: 1200) 730px, (min-width: 992) 610px, (min-width: 768) 690px, (min-width: 576) 510px, (max-width: 575) 420px,  50vw "
-// ) => {
-//   const imageMetadata = await Image(src, {
-//     widths: [...widths, null],
-//     formats: [...formats, null],
-//     outputDir: "_site/assets/images",
-//     urlPath: "/assets/images",
-//   });
-
-//   // const imageAttributes = {
-//   //   alt,
-//   //   sizes,
-//   //   loading: "lazy",
-//   //   decoding: "async",
-//   // };
-
-//   // return Image.generateHTML(imageMetadata, imageAttributes);
-
-//   const sourceHtmlString = Object.values(imageMetadata)
-//     // Map each format to the source HTML markup
-//     .map((images) => {
-//       // The first entry is representative of all the others
-//       // since they each have the same shape
-//       const { sourceType } = images[0];
-
-//       // Use our util from earlier to make our lives easier
-//       const sourceAttributes = stringifyAttributes({
-//         type: sourceType,
-//         // srcset needs to be a comma-separated attribute
-//         srcset: images.map((image) => image.srcset).join(", "),
-//         sizes,
-//       });
-
-//       // Return one <source> per format
-//       return `<source ${sourceAttributes}>`;
-//     })
-//     .join("\n");
-
-//   const getLargestImage = (format) => {
-//     const images = imageMetadata[format];
-//     return images[images.length - 1];
-//   };
-
-//   const largestUnoptimizedImg = getLargestImage(formats[0]);
-//   const imgAttributes = stringifyAttributes({
-//     src: largestUnoptimizedImg.url,
-//     // width: largestUnoptimizedImg.width,
-//     // height: largestUnoptimizedImg.height,
-//     alt,
-//     loading: "lazy",
-//     decoding: "async",
-//     class: className,
-//   });
-//   const imgHtmlString = `<img ${imgAttributes}>`;
-
-//   // const pictureAttributes = stringifyAttributes({
-//   //   class: className,
-//   // });
-//   const picture = `<picture>
-//     ${sourceHtmlString}
-//     ${imgHtmlString}
-//   </picture>`;
-
-//   return outdent`${picture}`;
-// };
 const imageShortcode = async (
   src,
   alt,
@@ -88,7 +16,7 @@ const imageShortcode = async (
     outputDir: "docs/assets/images",
     urlPath: "/assets/images",
     cacheOptions: {
-      duration: "1d", // Cache duration
+      duration: "10d", // Cache duration
       key: new Date().getTime(), // Force regeneration by using a unique key
     },
     filenameFormat: function (id, src, width, format, options) {
@@ -193,66 +121,46 @@ module.exports = function (eleventyConfig) {
     },
   });
 
-  // eleventyConfig.addShortcode(
-  //   "imagen",
-  //   async function (src, alt, widths = [154, 365, 570, 730], sizes = "100vh") {
-  //     let metadata = await Image(src, {
-  //       widths,
-  //       formats: ["webp", "jpeg"],
-  //     });
-
-  //     let imageAttributes = {
-  //       alt,
-  //       sizes,
-  //       loading: "lazy",
-  //       decoding: "async",
-  //     };
-
-  //     // You bet we throw an error on a missing alt (alt="" works okay)
-  //     return Image.generateHTML(metadata, imageAttributes);
-  //   }
-  // );
-
   eleventyConfig.addNunjucksAsyncShortcode("imagen", imageShortcode);
 
-  eleventyConfig.addPairedShortcode("imgMed", function (imagen) {
-    return (
-      "<img class='imagenMediana' src='/assets/images/" +
-      imagen +
-      "' width='100%' />"
-    );
-  });
+  // eleventyConfig.addPairedShortcode("imgMed", function (imagen) {
+  //   return (
+  //     "<img class='imagenMediana' src='/assets/images/" +
+  //     imagen +
+  //     "' width='100%' />"
+  //   );
+  // });
 
-  eleventyConfig.addPairedShortcode("imgIzq", function (imagen) {
-    return (
-      "<img class='imagenIzq' src='/assets/images/" +
-      imagen +
-      "' width='50%' />"
-    );
-  });
+  // eleventyConfig.addPairedShortcode("imgIzq", function (imagen) {
+  //   return (
+  //     "<img class='imagenIzq' src='/assets/images/" +
+  //     imagen +
+  //     "' width='50%' />"
+  //   );
+  // });
 
-  eleventyConfig.addPairedShortcode("imgDer", function (imagen) {
-    return (
-      "<img class='imagenDer' src='/assets/images/" +
-      imagen +
-      "' width='50%' />"
-    );
-  });
+  // eleventyConfig.addPairedShortcode("imgDer", function (imagen) {
+  //   return (
+  //     "<img class='imagenDer' src='/assets/images/" +
+  //     imagen +
+  //     "' width='50%' />"
+  //   );
+  // });
 
-  eleventyConfig.addShortcode("estring", function (objeto) {
-    return console.log(objeto);
-  });
+  // eleventyConfig.addShortcode("estring", function (objeto) {
+  //   return console.log(objeto);
+  // });
 
-  eleventyConfig.addFilter("sanitizarPalabras", function (string) {
-    const sinTildes = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  // eleventyConfig.addFilter("sanitizarPalabras", function (string) {
+  //   const sinTildes = string.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-    const slug = "-";
-    const sanitized = sinTildes
-      .toLowerCase()
-      .replace(/[^0-9a-z_]+/g, slug) // Replace invalid characters with slug
-      .replace(new RegExp(`^${slug}+|${slug}+$`, "g"), ""); // Trim slug from start and end
-    return sanitized;
-  });
+  //   const slug = "-";
+  //   const sanitized = sinTildes
+  //     .toLowerCase()
+  //     .replace(/[^0-9a-z_]+/g, slug) // Replace invalid characters with slug
+  //     .replace(new RegExp(`^${slug}+|${slug}+$`, "g"), ""); // Trim slug from start and end
+  //   return sanitized;
+  // });
 
   eleventyConfig.addFilter("primeraOracion", function (value) {
     if (!value) return "";
