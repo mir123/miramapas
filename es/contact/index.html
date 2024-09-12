@@ -89,7 +89,7 @@
     
 
     
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <script>
     function onSubmit(token) {
       document
@@ -109,7 +109,7 @@
         <div class="col-lg-6 ml-auto">
           <div class="site-contact-form">
             <h4>Cuéntanos sobre tu proyecto</h4>
-            <form method="POST" action="https://formspree.io/f/mgvwbolw">
+            <form method="POST" id="escribeme" action="https://formspree.io/f/mgvwbolw">
               <input name="subject" type="hidden" value="Mensaje en Miramapas"/>
 
               <div class="row">
@@ -132,7 +132,7 @@
               <div class="col-12">
 
                 <br/>
-                <button data-callback='onSubmit' data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG" data-action='submit' type="submit" class="btn btn-primary" formtarget="_blank">
+                <button data-callback='onSubmit' data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG" data-action='submit' type="submit" class="g-recaptcha btn btn-primary" formtarget="_blank">
                   <span class="btn-area">
                     <span data-text="Enviar mensaje">
                       Enviar mensaje
