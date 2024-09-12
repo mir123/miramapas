@@ -272,6 +272,23 @@ textarea.form-control {
 @media (max-width: 991px) {
   .site-navigation .nav-item {
     text-align: center;
+    font-size: 18px;
+  }
+
+  .site-navigation .navbar-brand img {
+    max-width: 128px;
+  }
+
+  .site-navigation .navbar-collapse .nav-item .nav-link {
+    padding: 2px;
+  }
+  .site-navigation .navbar-collapse .nav-item:last-child {
+    margin: 0px 20px;
+  }
+  .navbar-collapse .btn-sm {
+    margin: 0px auto;
+    width: 50%;
+    padding: 5px 40px !important;
   }
 }
 .site-navigation .nav-item .nav-link {
@@ -281,12 +298,14 @@ textarea.form-control {
   padding: 15px 18px;
   position: relative;
 }
+
 .site-navigation .nav-item .nav-link:hover {
   color: #ec8806;
 }
 .site-navigation .nav-item:last-child {
   margin-left: 15px;
 }
+
 .site-navigation .navbar-toggler {
   outline: 0;
   padding: 0;
@@ -323,6 +342,12 @@ textarea.form-control {
 .site-navigation .navbar-toggler.collapsed .icon-bar:nth-child(3) {
   transform: rotate(0);
 }
+
+.navbar-collapse {
+  background-color: #2d2d2d;
+  padding-bottom: 10px;
+}
+
 .site-navigation.nav-bg {
   padding: 12px 0;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.09);
@@ -541,6 +566,7 @@ textarea.form-control {
     0px 30px 45px 0px rgba(0, 0, 0, 0.02), 0px 30px 45px 0px rgba(0, 0, 0, 0.03),
     0px 30px 45px 0px rgba(0, 0, 0, 0.04);
 }
+
 .site-project-item:hover .site-project-item-content,
 .site-project-item:hover .site-blog-post-content,
 .site-blog-post:hover .site-project-item-content,
@@ -607,9 +633,18 @@ textarea.form-control {
   }
 }
 @media (max-width: 991px) {
+  .site-project,
+  .site-blog {
+    padding: 0;
+  }
   .site-project-header-content {
     text-align: center;
     margin-bottom: 30px;
+  }
+
+  .site-project-item-content {
+    padding: 20px 30px;
+    transform: translateY(-100%);
   }
 }
 .site-project-header-action {
