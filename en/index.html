@@ -26,10 +26,8 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
-    
 
-    <script src="/assets/js/photoswipe.umd.min.js"></script>
-    <script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
+    
 
     <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
 
@@ -373,6 +371,61 @@
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
+    import PhotoSwipeDeepZoom from '../../../assets/js/photoswipe-deep-zoom-plugin.esm.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".site-project-single-description", // Or any parent selector that contains your images
+      children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+      pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+      wheelToZoom: true
+      // Optional settings
+      // showHideAnimationType: 'fade',
+      // bgOpacity: 0.8,
+    });
+    lightbox.on("uiRegister", function () {
+      lightbox
+        .pswp
+        .ui
+        .registerElement({
+          name: "custom-caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          html: "Caption text",
+          onInit: (el, pswp) => {
+            lightbox
+              .pswp
+              .on("change", () => {
+                const currSlideElement = lightbox.pswp.currSlide.data.element;
+                let captionHTML = "";
+                if (currSlideElement) {
+                  const hiddenCaption = currSlideElement.querySelector(".image-caption");
+                  if (hiddenCaption) {
+                    // get caption from element with class hidden-caption-content
+                    captionHTML = hiddenCaption.innerHTML;
+                  } else {
+                    // get caption from alt attribute
+                    captionHTML = currSlideElement
+                      .querySelector("img")
+                      .getAttribute("alt");
+                  }
+                }
+                el.innerHTML = captionHTML || "";
+              });
+          }
+        });
+    });
+
+    const deepZoomPlugin = new PhotoSwipeDeepZoom(lightbox, {
+      // deep zoom plugin options, for example:
+      tileSize: 256
+    });
+
+    lightbox.init();
+  </script>
 
 </body>
 </html>
