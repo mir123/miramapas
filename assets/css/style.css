@@ -1145,7 +1145,11 @@ video {
     display: flex;
     flex-flow: column wrap;
     float: left;
-    padding: 0px 20px 20px 0px;
+    padding: 1em 1.5em 1em 0em;
+  }
+
+  figure {
+    margin: 0em;
   }
 
   .imagenDer {
