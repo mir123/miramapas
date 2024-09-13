@@ -43,8 +43,6 @@ $(document).ready(function () {
     $(".site-testimonial-item").removeClass("active");
   });
 
-  console.log("haciendo el onclick");
-
   $("#botonLenguaje").on("click", function (event) {
     console.log("clic en boton");
     const lang = $(this).data("lang");
@@ -52,6 +50,45 @@ $(document).ready(function () {
     const newLang = lang ? lang : "es"; // Toggle language between "es" and "en"
     setLanguage(newLang); // Set the new language
   });
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: ".site-project-single-description", // Or any parent selector that contains your images
+    children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+    pswpModule: PhotoSwipe,
+    // Optional settings
+    // showHideAnimationType: 'fade',
+    // bgOpacity: 0.8,
+  });
+  lightbox.on("uiRegister", function () {
+    lightbox.pswp.ui.registerElement({
+      name: "custom-caption",
+      order: 9,
+      isButton: false,
+      appendTo: "root",
+      html: "Caption text",
+      onInit: (el, pswp) => {
+        lightbox.pswp.on("change", () => {
+          const currSlideElement = lightbox.pswp.currSlide.data.element;
+          let captionHTML = "";
+          if (currSlideElement) {
+            const hiddenCaption =
+              currSlideElement.querySelector(".image-caption");
+            if (hiddenCaption) {
+              // get caption from element with class hidden-caption-content
+              captionHTML = hiddenCaption.innerHTML;
+            } else {
+              // get caption from alt attribute
+              captionHTML = currSlideElement
+                .querySelector("img")
+                .getAttribute("alt");
+            }
+          }
+          el.innerHTML = captionHTML || "";
+        });
+      },
+    });
+  });
+  lightbox.init();
 });
 
 // Para expandir y encoger el encabezado al bajar

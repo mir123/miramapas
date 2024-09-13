@@ -26,6 +26,13 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
+    
+
+    <script src="/assets/js/photoswipe.umd.min.js"></script>
+    <script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
+
   </head>
 
   <body>
@@ -81,9 +88,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <figure class="imagenFull"><picture><source type="image/webp" srcset="/assets/images/corredores_dinamico_thumb-w5kieek-nM-200.webp 200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-300.webp 300w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-450.webp 450w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-600.webp 600w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-800.webp 800w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1200.webp 1200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1913.webp 1913w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/jpeg" srcset="/assets/images/corredores_dinamico_thumb-w5kieek-nM-200.jpg 200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-300.jpg 300w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-450.jpg 450w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-600.jpg 600w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-800.jpg 800w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1200.jpg 1200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1913.jpg 1913w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/png" srcset="/assets/images/corredores_dinamico_thumb-w5kieek-nM-200.png 200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-300.png 300w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-450.png 450w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-600.png 600w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-800.png 800w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1200.png 1200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1913.png 1913w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/corredores_dinamico_thumb-w5kieek-nM-1913.webp" alt="" loading="lazy" decoding="async"></picture></figure>
+          <figure class="imagenFull">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/corredores_dinamico_thumb-w5kieek-nM-200.jpg 200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-300.jpg 300w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-450.jpg 450w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-600.jpg 600w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-800.jpg 800w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1200.jpg 1200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1913.jpg 1913w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+<source type="image/webp" srcset="/assets/images/corredores_dinamico_thumb-w5kieek-nM-200.webp 200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-300.webp 300w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-450.webp 450w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-600.webp 600w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-800.webp 800w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1200.webp 1200w, /assets/images/corredores_dinamico_thumb-w5kieek-nM-1913.webp 1913w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/corredores_dinamico_thumb-w5kieek-nM-200.jpg" alt="" loading="lazy" decoding="async">
+        </picture>
+        
+      </figure>
 
           
         </div>
@@ -110,13 +121,25 @@
             </ul>
             <div class="site-project-single-description">
               <p>Hice este <a href="https://www.almanaqueazul.org/conectividad/mapa/">mapa dinámico</a> para acompañar el <a href="corredores.md">mapa de corredores naturales de Panamá</a>y poder ver los datos con mayor detalle.</p>
-<figure class="imagenFull"><picture><source type="image/webp" srcset="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.webp 200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-300.webp 300w, /assets/images/corredores_dinamico_3-_DaInBQ35K-450.webp 450w, /assets/images/corredores_dinamico_3-_DaInBQ35K-600.webp 600w, /assets/images/corredores_dinamico_3-_DaInBQ35K-800.webp 800w, /assets/images/corredores_dinamico_3-_DaInBQ35K-1200.webp 1200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-3826.webp 3826w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/jpeg" srcset="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.jpg 200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-300.jpg 300w, /assets/images/corredores_dinamico_3-_DaInBQ35K-450.jpg 450w, /assets/images/corredores_dinamico_3-_DaInBQ35K-600.jpg 600w, /assets/images/corredores_dinamico_3-_DaInBQ35K-800.jpg 800w, /assets/images/corredores_dinamico_3-_DaInBQ35K-1200.jpg 1200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-3826.jpg 3826w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/png" srcset="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.png 200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-300.png 300w, /assets/images/corredores_dinamico_3-_DaInBQ35K-450.png 450w, /assets/images/corredores_dinamico_3-_DaInBQ35K-600.png 600w, /assets/images/corredores_dinamico_3-_DaInBQ35K-800.png 800w, /assets/images/corredores_dinamico_3-_DaInBQ35K-1200.png 1200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-3826.png 3826w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/corredores_dinamico_3-_DaInBQ35K-3826.webp" alt="Screenshot del mapa web de corredores naturales de Panamá" loading="lazy" decoding="async"></picture></figure>
+<figure class="imagenFull">
+      <a href="/assets/images/corredores_dinamico_3-_DaInBQ35K-2000.jpg" class="lightbox" data-pswp-srcset="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.jpg 200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-300.jpg 300w, /assets/images/corredores_dinamico_3-_DaInBQ35K-450.jpg 450w, /assets/images/corredores_dinamico_3-_DaInBQ35K-600.jpg 600w, /assets/images/corredores_dinamico_3-_DaInBQ35K-800.jpg 800w, /assets/images/corredores_dinamico_3-_DaInBQ35K-1200.jpg 1200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-2000.jpg 2000w" data-pswp-width="2000" data-pswp-height="1050" data-pswp-src="/assets/images/corredores_dinamico_3-_DaInBQ35K-2000.jpg" data-pswp-alt="Screenshot del mapa web de corredores naturales de Panamá">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.jpg 200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-300.jpg 300w, /assets/images/corredores_dinamico_3-_DaInBQ35K-450.jpg 450w, /assets/images/corredores_dinamico_3-_DaInBQ35K-600.jpg 600w, /assets/images/corredores_dinamico_3-_DaInBQ35K-800.jpg 800w, /assets/images/corredores_dinamico_3-_DaInBQ35K-1200.jpg 1200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-2000.jpg 2000w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+<source type="image/webp" srcset="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.webp 200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-300.webp 300w, /assets/images/corredores_dinamico_3-_DaInBQ35K-450.webp 450w, /assets/images/corredores_dinamico_3-_DaInBQ35K-600.webp 600w, /assets/images/corredores_dinamico_3-_DaInBQ35K-800.webp 800w, /assets/images/corredores_dinamico_3-_DaInBQ35K-1200.webp 1200w, /assets/images/corredores_dinamico_3-_DaInBQ35K-2000.webp 2000w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+          <img src="/assets/images/corredores_dinamico_3-_DaInBQ35K-200.jpg" alt="Screenshot del mapa web de corredores naturales de Panamá" loading="lazy" decoding="async">
+        </picture>
+      </a>
+<p></figure></p>
 <p>El mapa permite visualizar en detalle los datos de conectividad que obtuvimos del modelo. Por medio de un slider se pueden cambiar los niveles de conductividad que se muestran. Los resultados del modelo tienen una resolución de 30 m, por lo que es posible acercarse y estudiar los efectos de conectividad a nivel de finca o de manzana urbana.</p>
-<figure class="imagenFull"><picture><source type="image/webp" srcset="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.webp 200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-300.webp 300w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-450.webp 450w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-600.webp 600w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-800.webp 800w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-1200.webp 1200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-3833.webp 3833w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/jpeg" srcset="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.jpg 200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-300.jpg 300w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-450.jpg 450w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-600.jpg 600w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-800.jpg 800w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-1200.jpg 1200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-3833.jpg 3833w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/png" srcset="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.png 200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-300.png 300w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-450.png 450w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-600.png 600w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-800.png 800w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-1200.png 1200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-3833.png 3833w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/corredores_dinamico_4-3BcY7AdWwl-3833.webp" alt="Screenshot del mapa web de corredores naturales de Panamá" loading="lazy" decoding="async"></picture></figure>
+<figure class="imagenFull">
+      <a href="/assets/images/corredores_dinamico_4-3BcY7AdWwl-2000.jpg" class="lightbox" data-pswp-srcset="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.jpg 200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-300.jpg 300w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-450.jpg 450w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-600.jpg 600w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-800.jpg 800w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-1200.jpg 1200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-2000.jpg 2000w" data-pswp-width="2000" data-pswp-height="1051" data-pswp-src="/assets/images/corredores_dinamico_4-3BcY7AdWwl-2000.jpg" data-pswp-alt="Screenshot del mapa web de corredores naturales de Panamá">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.jpg 200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-300.jpg 300w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-450.jpg 450w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-600.jpg 600w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-800.jpg 800w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-1200.jpg 1200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-2000.jpg 2000w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+<source type="image/webp" srcset="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.webp 200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-300.webp 300w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-450.webp 450w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-600.webp 600w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-800.webp 800w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-1200.webp 1200w, /assets/images/corredores_dinamico_4-3BcY7AdWwl-2000.webp 2000w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+          <img src="/assets/images/corredores_dinamico_4-3BcY7AdWwl-200.jpg" alt="Screenshot del mapa web de corredores naturales de Panamá" loading="lazy" decoding="async">
+        </picture>
+      </a>
+<p></figure></p>
 <p>Todos los mapas y los datos están disponibles públicamente en <a href="https://www.almanaqueazul.org/conectividad/">el sitio web de Almanaque Azul</a>.</p>
 <p>Este mapa está desarrollado en <a href="https://openlayers.org/">OpenLayers</a> y las capas se cargan usando la fantástica tecnología serverless que ahora tenemos disponible: <a href="https://protomaps.com/">Protomaps</a> y <a href="https://www.cogeo.org/">Cloud Optimized GeoTIFF</a>. Gracias a eso es posible poner los datos en un hosting web barato, sin necesidad de un servidor geográfico como GeoServer o ArcGIS Server.</p>
 <p>Puedes ver el mapa dinámico de corredores naturales de Panamá <a href="https://www.almanaqueazul.org/conectividad/mapa/">aquí</a>.</p>
@@ -134,8 +157,13 @@
                     
                       <a href="/es/portfolio/pacifico/">
                         <span class="link-area">
-                          <figure class="projectThumb"><picture><source type="image/webp" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.webp 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.webp 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.webp 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.webp 570w" sizes="120px">
-<source type="image/jpeg" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.jpg 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.jpg 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.jpg 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.jpg 570w" sizes="120px"><img src="/assets/images/desde_el_pacifico_570-2yfASg2nqq-570.webp" alt="project-thumb" loading="lazy" decoding="async"></picture></figure>
+                          <figure class="projectThumb">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.jpg 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.jpg 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.jpg 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.jpg 570w" sizes="120px">
+<source type="image/webp" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.webp 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.webp 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.webp 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.webp 570w" sizes="120px"><img src="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.jpg" alt="project-thumb" loading="lazy" decoding="async">
+        </picture>
+        
+      </figure>
 
                           <img class="flecha prev" src="/assets/js/openseadragon/images/previous_rest.png" alt="next project">
 
@@ -158,8 +186,13 @@
                         <span class="link-area ">
                           
                           <img class="flecha next" src="/assets/js/openseadragon/images/next_rest.png" alt="next project">
-                          <figure class="projectThumb"><picture><source type="image/webp" srcset="/assets/images/corredores_thumb-4qBCcO52Aq-200.webp 200w, /assets/images/corredores_thumb-4qBCcO52Aq-300.webp 300w, /assets/images/corredores_thumb-4qBCcO52Aq-450.webp 450w, /assets/images/corredores_thumb-4qBCcO52Aq-600.webp 600w, /assets/images/corredores_thumb-4qBCcO52Aq-774.webp 774w" sizes="120px">
-<source type="image/jpeg" srcset="/assets/images/corredores_thumb-4qBCcO52Aq-200.jpg 200w, /assets/images/corredores_thumb-4qBCcO52Aq-300.jpg 300w, /assets/images/corredores_thumb-4qBCcO52Aq-450.jpg 450w, /assets/images/corredores_thumb-4qBCcO52Aq-600.jpg 600w, /assets/images/corredores_thumb-4qBCcO52Aq-774.jpg 774w" sizes="120px"><img src="/assets/images/corredores_thumb-4qBCcO52Aq-774.webp" alt="project-thumb" loading="lazy" decoding="async"></picture></figure>
+                          <figure class="projectThumb">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/corredores_thumb-4qBCcO52Aq-200.jpg 200w, /assets/images/corredores_thumb-4qBCcO52Aq-300.jpg 300w, /assets/images/corredores_thumb-4qBCcO52Aq-450.jpg 450w, /assets/images/corredores_thumb-4qBCcO52Aq-600.jpg 600w, /assets/images/corredores_thumb-4qBCcO52Aq-774.jpg 774w" sizes="120px">
+<source type="image/webp" srcset="/assets/images/corredores_thumb-4qBCcO52Aq-200.webp 200w, /assets/images/corredores_thumb-4qBCcO52Aq-300.webp 300w, /assets/images/corredores_thumb-4qBCcO52Aq-450.webp 450w, /assets/images/corredores_thumb-4qBCcO52Aq-600.webp 600w, /assets/images/corredores_thumb-4qBCcO52Aq-774.webp 774w" sizes="120px"><img src="/assets/images/corredores_thumb-4qBCcO52Aq-200.jpg" alt="project-thumb" loading="lazy" decoding="async">
+        </picture>
+        
+      </figure>
 
                         </span>
 
@@ -315,5 +348,6 @@
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
 </body>
 </html>

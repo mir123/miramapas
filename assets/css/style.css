@@ -1145,11 +1145,7 @@ video {
     display: flex;
     flex-flow: column wrap;
     float: left;
-    padding: 1em 1.5em 1em 0em;
-  }
-
-  figure {
-    margin: 0em;
+    padding: 0px 20px 20px 0px;
   }
 
   .imagenDer {
@@ -1179,6 +1175,25 @@ figcaption {
   text-align: center;
   font-size: 95%;
   padding: 10px 0 0 0;
+}
+
+.pswp__custom-caption {
+  background: #99a230;
+  font-size: 16px;
+  color: #2d2d2d;
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.pswp__custom-caption a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .site-team-member {
