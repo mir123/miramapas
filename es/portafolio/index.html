@@ -510,23 +510,35 @@
       </div>
     </footer>
   
-  <!-- <script src="js/vendor.js"></script> -->
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
 
   <script type="module">
     import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
-    import PhotoSwipeDeepZoom from '../../../assets/js/photoswipe-deep-zoom-plugin.esm.js';
+
+    let deepZoomPlugin;
 
     const lightbox = new PhotoSwipeLightbox({
       gallery: ".site-project-single-description", // Or any parent selector that contains your images
       children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
       pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+
+      openPromise: () => {
+        // make sure it's initialized only once per lightbox
+        if (!deepZoomPlugin) {
+          return import ('../../../assets/js/photoswipe-deep-zoom-plugin.esm.js').then((deepZoomPluginModule) => {
+            deepZoomPlugin = new deepZoomPluginModule.default(lightbox, {
+              // deep zoom plugin options
+              tileSize: 256
+
+            });
+          })
+        }
+      },
+
       wheelToZoom: true
-      // Optional settings
-      // showHideAnimationType: 'fade',
-      // bgOpacity: 0.8,
+
     });
     lightbox.on("uiRegister", function () {
       lightbox
@@ -560,11 +572,6 @@
               });
           }
         });
-    });
-
-    const deepZoomPlugin = new PhotoSwipeDeepZoom(lightbox, {
-      // deep zoom plugin options, for example:
-      tileSize: 256
     });
 
     lightbox.init();
