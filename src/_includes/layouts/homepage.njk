@@ -2,18 +2,31 @@
 
 {% block content %}
 
-  <section class="site-hero">
+  <style>
+    .retrato {
+
+      background-image: url("/assets/images/{{yo.imagen}}");
+    }
+
+    .retrato:hover {
+      background-image: url("/assets/images/{{yo.imagenHover}}");
+
+    }
+  </style>
+  <section class="site-hero" id="inicio">
     <div class="container">
       <div class="row">
-        <div class="col-lg-10 mx-auto">
+        <div class="col-lg mx-auto">
           <div class="site-hero-content text-center">
             <h6>{{hero.subTitle}}</h6>
-            <h1>
-              <div class="tituloFondo">
-                {{hero.title.firstPara}}</div>
-              <br>
-              {{hero.title.secondPara}}
-            </h1>
+
+            <div class="tituloFondo">
+              <h1>
+                {{hero.title.firstPara}}</h1>
+
+              <h1>{{hero.title.secondPara}}
+              </h1>
+            </div>
             <ul class="site-hero-content-buttons">
               <li>
                 <a href="{{hero.seeWorkBtn.link}}" class="btn btn-secondary scroll-to">
@@ -25,7 +38,7 @@
                 </a>
               </li>
               <li>
-                <a href="/{{hero.connectBtn.link}}" class="btn btn-primary">
+                <a href="/{{lang}}/{{hero.connectBtn.link}}" class="btn btn-primary">
                   <span class="btn-area">
                     <span data-text="{{hero.connectBtn.text}}">
                       {{hero.connectBtn.text}}
@@ -88,14 +101,24 @@
                   <div class="site-project-item-thumb">
                     {% imagen portfolio.data.img,
                     "project-thumb",
-                    "imagenFull",
+                    "imagenSimple",
                     "" %}
                     {# <img src="/{{portfolio.data.img}}" alt="project-thumb"> #}
                   </div>
-                  <div class="site-project-item-content">
-                    <span>{{portfolio.data.subTitle}}</span>
-                    <h3>{{portfolio.data.title}}</h3>
-                    {# {{portfolio.data.linkText}} #}
+
+                  <div class="tituloFondo">
+                    <h2>
+                      {{portfolio.data.año}}</h2>
+                    <h1>
+                      {{portfolio.data.title}}
+
+                    </h1>
+                    <h2>
+
+                      {{portfolio.data.subtítulo}}
+
+                    </h2>
+
                   </div>
                 </a>
               </div>
@@ -103,46 +126,52 @@
           {% endif %}
 
         {% endfor %}
-        <div class="col-12 text-center text-lg-left">
+        {# <div class="col-12 text-center text-lg-left">
           <a href="/{{portfolio.seeAllbtn.link}}" class="site-project-cta">{{portfolio.seeAllbtn.text}}</a>
-        </div>
+        </div> #}
       </div>
     </div>
   </section>
-  {# 
-    <section class="site-testimonial">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title">
-              <h2>
-                {{testimonials.title}}
-              </h2>
-              <p>
-                {{testimonials.des}} 
-              </p>
-            </div>
+
+  <section class="site-about-header" id="yo">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="site-about-wrapper">
+            <div class="site-about-company">
+              <div class="retrato"/></div>
+            {{yo.presentación | safe}}
           </div>
-          {% for opinion in testimonials.opinion %}
-          <div class="col-lg-4 col-md-6">
-            <div class="site-testimonial-item">
-              <div class="site-testimonial-item-header">
-                <div class="thumb">
-                  <img src="{{opinion.img}}" alt="user-thumb">
-                </div>
-                <div class="person">
-                  <h5>{{opinion.name}}</h5>
-                  <p>{{opinion.dig}}</p>
-                </div>
-              </div>
-              <p class="site-testimonial-item-body">
-                {{opinion.comment}}
-              </p>
-            </div>
-          </div> 
-          {% endfor %}
+          <div class="site-about-description">
+            <p>
+              <span class="primeraOracion">{{yo.des | primeraOracion}}</span>
+              <span class="restoDelTexto">{{yo.des | restoDelTexto}}</span>
+
+            </p>
+          </div>
         </div>
       </div>
-    </section> #}
+    </div>
+  </div>
+</section>
+
+<section class="site-expertise">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="section-title">
+          <h2>{{expertise.title}}</h2>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="site-expertise-list">
+          {% for expertIn in expertise.expertIn %}
+            <li>{{expertIn}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock %}

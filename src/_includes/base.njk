@@ -9,10 +9,6 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-/>
 
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="/assets/vendor/slick/slick.css"/>
@@ -30,6 +26,13 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
+
+    {# <script src="/assets/js/photoswipe.umd.min.js"></script>
+    <script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
+    <script type="module" src="/assets/js/photoswipe-deep-zoom-plugin.esm.js"></script> #}
+
+    <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
+
   </head>
 
   <body>
@@ -54,27 +57,28 @@
             <ul class="navbar-nav ml-auto main-nav" id="navLinks">
               {% for navLink in navLinks %}
                 <li class="nav-item">
-                  {% if navLink == "inicio" %}
-                    <a class="nav-link" href="/">{{navLink | capitalize}}</a>
-                  {% else %}
-                    {# <a class="nav-link" href="/{% call reemplazarAcentos(navLink) %}{% endcall %}">{{navLink | capitalize}}</a>  #}
-                    {# <a class="nav-link" href="/{{navLink}}">{{navLink | capitalize}}</a>  #}
-                    <a class="nav-link" href="/{{ page.lang }}/{{ navLink[1] | slugify | locale_url }}">{{navLink[0] | capitalize}}</a>
-                  {% endif %}
+                  {# {% if navLink[0] == "inicio" %}
+                    <a class="nav-link" href="/{{ lang }}/">{{navLink[1] | capitalize}}</a>
+                  {% else %} #}
+                  {# <a class="nav-link" href="/{% call reemplazarAcentos(navLink) %}{% endcall %}">{{navLink | capitalize}}</a>  #}
+                  {# <a class="nav-link" href="/{{navLink}}">{{navLink | capitalize}}</a>  #}
+                  <a class="nav-link scroll-to" href="{{ navLink[1]}}">{{navLink[0] | capitalize}}</a>
+                  {# {% endif %} #}
                 </li>
               {% endfor %}
               <li class="nav-item">
 
                 {% for link in page.url | locale_links %}
 
-                  <a  class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="{{link.url}}">
-                    <span id="botonLenguaje" data-lang="{{link.lang}}" class="btn-area">
+                  <a class="nav-link boton" href="{{link.url}}">
+                    <span id="botonLenguaje" data-lang="{{link.lang}}">
                       <span data-text="{{link.label}}">
-                        {{link.label}}
+                        {{link.lang}}
                       </span>
                     </span>
                   </a>
                 {% endfor %}
+
               </li>
             </ul>
           </div>
@@ -206,9 +210,72 @@
       </div>
     </footer>
   {% endblock %}
-  <!-- <script src="js/vendor.js"></script> -->
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
+
+    let deepZoomPlugin;
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".site-project-single-description", // Or any parent selector that contains your images
+      children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+      pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+
+      openPromise: () => {
+        // make sure it's initialized only once per lightbox
+        if (!deepZoomPlugin) {
+          return import ('../../../assets/js/photoswipe-deep-zoom-plugin.esm.js').then((deepZoomPluginModule) => {
+            deepZoomPlugin = new deepZoomPluginModule.default(lightbox, {
+              // deep zoom plugin options
+              tileSize: 256
+
+            });
+          })
+        }
+      },
+
+      wheelToZoom: true
+
+    });
+    lightbox.on("uiRegister", function () {
+      lightbox
+        .pswp
+        .ui
+        .registerElement({
+          name: "custom-caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          html: "Caption text",
+          onInit: (el, pswp) => {
+            lightbox
+              .pswp
+              .on("change", () => {
+                const currSlideElement = lightbox.pswp.currSlide.data.element;
+                let captionHTML = "";
+                if (currSlideElement) {
+                  const hiddenCaption = currSlideElement.querySelector(".image-caption");
+                  if (hiddenCaption) {
+                    // get caption from element with class hidden-caption-content
+                    captionHTML = hiddenCaption.innerHTML;
+                  } else {
+                    // get caption from alt attribute
+                    captionHTML = currSlideElement
+                      .querySelector("img")
+                      .getAttribute("alt");
+                  }
+                }
+                el.innerHTML = captionHTML || "";
+              });
+          }
+        });
+    });
+
+    lightbox.init();
+  </script>
+
 </body>
 </html>

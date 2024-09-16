@@ -1,40 +1,36 @@
 ---
-subTitle: "Colombia"
+país: "Colombia"
 title: "Desde el Pacífico"
+subtítulo: "Las texturas del territorio"
+
 date: 2024-04-01
 autor: "Mir Rodríguez Lombardo"
 medio: "Impresión digital"
 dimensiones: "2 m × 2 m"
 cliente: "Museo de Arte Moderno de Medellín"
 fecha: "abril de 2024"
+año: 2024
 img: "assets/images/projects/desde_el_pacifico_570.jpg"
 linkText: "ver proyecto"
 lang: "es"
 ---
 
-  <script src="/assets/js/openseadragon/openseadragon.min.js"></script>
-
 Cuando la curadora Yolanda Chois me llamó y me pidió este mapa, me encontraba precisamente experimentando con una nueva manera de visualizar las formas del territorio. Yolanda estaba en la fase final de la preparación de la exposición _Desafiar. Atravesar el sol desde un gran Pacífico_ para el Museo de Arte Moderno de Medellín y necesitaban un mapa del territorio que abarcaban las obras: el Pacífico de Panamá y Colombia.
 
 Para explicar el Pacífico en un mapa una de las cosas que acordamos fue mostrar el flujo de los ríos. Esto incluye los que se forman y caen en la vertiente del Pacífico pero también el Cauca, que desemboca en el Caribe pero que dibuja una especie de territorio cultural. Esos experimentos que estaba haciendo consistían en colorear las subcuencas de manera que se pudiera apreciar claramente los filos de las montañas, los valles y las pendientes. Es un método que se podría llamar _sombreado vectorial_ y que vino a estructurar el esqueleto del mapa para poder entender cómo la tierra va poniendo el lienzo sobre el cual nos pintamos los seres vivos. La textura de la superficie la ponen los ríos, las quebradas y los territorios afro, indígenas y campesinos, que aparecen como letras en torno a los polígonos que los conforman.
 
-<div id="pacificoMapaZoom" class="openseadragon" style="width: 800px; height: 800px;"></div>
-
-<script type="text/javascript">
-    var viewer = OpenSeadragon({
-        id: "pacificoMapaZoom",
-        prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/mosaicos/pacifico.dzi",
-            visibilityRatio: 1.0,
-
-        defaultZoomLevel: 	1,
-        minZoomLevel: 0,
-        maxZoomLevel:15,
-        constrainDuringPan: true,
-        showNavigator: true,
-    navigatorPosition: "BOTTOM_LEFT",
-    });
-</script>
+{% imagen
+  "assets/images/projects/pacifico_3000.jpg",
+  "Desde el Pacífico",
+  "imagenFull",
+  "",
+  {
+    dataPswpTileType: "deepzoom",
+    dataPswpTileUrl: "/mosaicos/pacifico_files/{z}/{x}_{y}.jpg",
+    dataPswpMaxWidth: "23622",
+    dataPswpMaxHeight: "24803"
+  }
+%}
 
 El mapa fue impreso a gran escala para que la gente pudiera interactual con él de forma física al entrar al espacio de la exposición.
 

@@ -25,8 +25,8 @@
     <div class="container">
       <div class="row">
 
+        {# {% for trabajo in pagination.items %} #}
         {% for trabajo in collections.portafolios | reverse %}
-
           {# {% if trabajo.data.lang == page.lang %} #}
           <div class="col-lg-6 col-md-10 mx-auto">
             <a href="{{trabajo.url}}" class="read-more">
@@ -35,13 +35,23 @@
 
                   {% imagen trabajo.data.img,
                 "project-thumb",
-                "imagenFull",
+                "imagenSimple",
                 "" %}
                   {# <img src="/{{trabajo.data.img}}" alt="project-thumb"> #}
                 </div>
-                <div class="site-project-item-content">
-                  <span>{{trabajo.data.subTitle}}</span>
-                  <h3>{{trabajo.data.title}}</h3>
+
+                <div class="tituloFondo">
+                  <h2>
+                    {{trabajo.data.año}}</h2>
+                  <h1>
+                    {{trabajo.data.title}}
+
+                  </h1>
+                  <h2>
+
+                    {{trabajo.data.subtítulo}}
+
+                  </h2>
 
                 </div>
               </div>
@@ -50,7 +60,37 @@
           {# {% endif %} #}
         {% endfor %}
 
+        <div class="col-12">
+          <div class="site-project-pagination">
+            <nav>
+              <ul class="pagination">
+                {% if pagination.href.previous %}
+                  <li class="page-item">
+                    <a class="page-link" href="{{pagination.href.previous}}">Previous</a>
+                  </li>
+                {% endif %}
+                {% for pageEntry in pagination.hrefs | reverse %}
+                  <li {% if page.url == pageEntry %}
+                          class="page-item active">
+                    <a class="page-link" href="{{pageEntry}}">{{loop.index}}</a>
+                  </li>
+                {% else %}
+                          class="page-item"><a class="page-link" href="{{pageEntry}}">{{loop.index}}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+
+            {% if pagination.href.next %}
+              <li class="page-item">
+                <a class="page-link" href="{{pagination.href.next}}">Next</a>
+              </li>
+            {% endif %}
+          </ul>
+        </nav>
       </div>
     </div>
-  </section>
+
+  </div>
+</div>
+</section>
 {% endblock %}

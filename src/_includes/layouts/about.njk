@@ -1,59 +1,57 @@
 {% extends "base.njk" %}
 
-
 {% block content %}
-<style>
-.retrato {
+  <style>
+    .retrato {
 
-  background-image: url("/assets/images/{{imagen}}");
-}
+      background-image: url("/assets/images/{{imagen}}");
+    }
 
-.retrato:hover {
-    background-image: url("/assets/images/{{imagenHover}}");
+    .retrato:hover {
+      background-image: url("/assets/images/{{imagenHover}}");
 
-}
-
+    }
   </style>
-    <section class="site-about-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="site-about-wrapper">
-              <div class="site-about-company">
-                <div class="retrato" /></div>
-                {{content | safe}}
-              </div>
-              <div class="site-about-description">
-                <p>
-                  <span class="primeraOracion">{{des | primeraOracion}}</span>
-                  <span class="restoDelTexto">{{des | restoDelTexto}}</span>
+  <section class="site-about-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="site-about-wrapper">
+            <div class="site-about-company">
+              <div class="retrato"/></div>
+            {{content | safe}}
+          </div>
+          <div class="site-about-description">
+            <p>
+              <span class="primeraOracion">{{des | primeraOracion}}</span>
+              <span class="restoDelTexto">{{des | restoDelTexto}}</span>
 
-                </p>
-              </div>
-            </div>
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="site-expertise">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="section-title">
-              <h2>{{expertise.title}}</h2>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <ul class="site-expertise-list">
-              {% for expertIn in expertise.expertIn %}
-              <li>{{expertIn}}</li>
-              {% endfor %}
-            </ul>
-          </div>
+<section class="site-expertise">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="section-title">
+          <h2>{{expertise.title}}</h2>
         </div>
       </div>
-    </section>
+      <div class="col-md-6">
+        <ul class="site-expertise-list">
+          {% for expertIn in expertise.expertIn %}
+            <li>{{expertIn}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 {# 
     <section class="site-client">
       <div class="container">

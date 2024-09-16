@@ -1,12 +1,14 @@
 ---
-subTitle: Panamá
+país: Panamá
 title: "Verdómetro"
+subtítulo: "Una herramienta para medir la deforestación"
 date: 2024-07-25
 autor: "Mir Rodríguez Lombardo"
 medio: "OpenLayers y GeoBlaze"
 dimensiones: ""
 cliente: "Centro de Incidencia Ambiental - Panamá"
 fecha: "2024"
+año: "2024"
 img: "assets/images/projects/verdometro_thumb.png"
 linkText: "ver proyecto"
 lang: "es"

@@ -9,7 +9,7 @@
 
           {% imagen img,
           "",
-          "imagenFull",
+          "imagenSimple",
           "" %}
 
           {# <img src="/{{img}}" alt="project-thumb"> #}
@@ -19,15 +19,15 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="site-project-single">
-            <h1>
-              <div class="tituloFondo port">
 
+            <div class="tituloFondo port">
+              <h1>
                 <span>
                   {{title}}
                 </span>
+              </h1>
+            </div>
 
-              </div>
-            </h1>
             <ul class="fichaTecnica">
 
               <li>{{medio}}</li>
@@ -56,7 +56,7 @@
                     {# {% if previousPost.data.lang == page.lang %} #}
                     <a href="{{previousPost.url}}">
                       <span class="link-area">
-                        {% imagen previousPost.data.img, "project-thumb", "thumb" %}
+                        {% imagen previousPost.data.img, "project-thumb", "imagenThumb" %}
 
                         <img class="flecha prev" src="/assets/js/openseadragon/images/previous_rest.png" alt="next project">
 
@@ -83,7 +83,7 @@
                       Siguiente proyecto
                     </span> #}
                         <img class="flecha next" src="/assets/js/openseadragon/images/next_rest.png" alt="next project">
-                        {% imagen nextPost.data.img, "project-thumb", "thumb" %}
+                        {% imagen nextPost.data.img, "project-thumb", "imagenThumb" %}
 
                       </span>
 

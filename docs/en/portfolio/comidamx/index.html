@@ -9,10 +9,6 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-/>
 
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="/assets/vendor/slick/slick.css"/>
@@ -30,6 +26,11 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
+
+    
+
+    <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
+
   </head>
 
   <body>
@@ -55,17 +56,25 @@
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/yo">Me</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="yo">Me</a>
                   
                 </li>
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/portafolio">Portfolio</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="portafolio">Portfolio</a>
+                  
+                </li>
+              
+                <li class="nav-item">
+                  
+                  
+                  
+                  <a class="nav-link scroll-to" href="home">Inicio</a>
                   
                 </li>
               
@@ -73,14 +82,15 @@
 
                 
 
-                  <a  class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/es/portfolio/comidamx/">
-                    <span id="botonLenguaje" data-lang="es" class="btn-area">
+                  <a class="nav-link boton" href="/es/portfolio/comidamx/">
+                    <span id="botonLenguaje" data-lang="es">
                       <span data-text="Español">
-                        Español
+                        es
                       </span>
                     </span>
                   </a>
                 
+
               </li>
             </ul>
           </div>
@@ -95,8 +105,13 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
 
-          <figure class="imagenFull"><picture><source type="image/webp" srcset="/assets/images/mapa_comida_mexico_570-sqD5RanncE-200.webp 200w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-300.webp 300w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-450.webp 450w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-570.webp 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/jpeg" srcset="/assets/images/mapa_comida_mexico_570-sqD5RanncE-200.jpg 200w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-300.jpg 300w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-450.jpg 450w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-570.jpg 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/mapa_comida_mexico_570-sqD5RanncE-570.webp" alt="" loading="lazy" decoding="async"></picture></figure>
+          <figure class="imagenFull">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/mapa_comida_mexico_570-sqD5RanncE-200.jpg 200w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-300.jpg 300w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-450.jpg 450w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-570.jpg 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+<source type="image/webp" srcset="/assets/images/mapa_comida_mexico_570-sqD5RanncE-200.webp 200w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-300.webp 300w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-450.webp 450w, /assets/images/mapa_comida_mexico_570-sqD5RanncE-570.webp 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/mapa_comida_mexico_570-sqD5RanncE-200.jpg" alt="" loading="lazy" decoding="async">
+        </picture>
+        
+      </figure>
 
           
         </div>
@@ -105,15 +120,15 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="site-project-single">
-            <h1>
-              <div class="tituloFondo port">
 
+            <div class="tituloFondo port">
+              <h1>
                 <span>
                   Food of Mexican Cultures
                 </span>
+              </h1>
+            </div>
 
-              </div>
-            </h1>
             <ul class="fichaTecnica">
 
               <li>Unpublished</li>
@@ -125,12 +140,26 @@
                 <script src="/assets/js/openseadragon/openseadragon.min.js"></script>
 <p>This map was an idea that came from Genoveva de la Peña, who at that time was the director of <em>Cencalli, the House of Corn and Food Culture</em>. Cencalli is a museum and cultural center that is part of the Secretaría de Cultura de México, and they wanted a map of Mexican food to display in one of their rooms.</p>
 <p>The first question, then, is what does a food map mean? It can be many different things. Together with Alexander Ortega Sepúlveda, an expert in Indigenous cuisines of Mexico, we decided that the map would feature ancestral ingredients that are still eaten in this territory and where they are cultivated. This left out items like bananas, lemons, and rice, which are widely cultivated and consumed here but are not native to this place. Alexander, in consultation with Cencalli, decided on the final list of &quot;essential foods.&quot;</p>
-<figure class="imagenIzq"><picture><source type="image/webp" srcset="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-200.webp 200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-300.webp 300w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-450.webp 450w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-600.webp 600w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-800.webp 800w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.webp 1200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1280.webp 1280w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
-<source type="image/jpeg" srcset="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-200.jpg 200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-300.jpg 300w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-450.jpg 450w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-600.jpg 600w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-800.jpg 800w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.jpg 1200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1280.jpg 1280w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw"><img src="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-1280.webp" alt="Sketch of the food map" loading="lazy" decoding="async"></picture></figure>
+<figure class="imagenIzq">
+      <a href="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.jpg" class="lightbox" data-pswp-srcset="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-200.jpg 200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-300.jpg 300w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-450.jpg 450w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-600.jpg 600w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-800.jpg 800w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.jpg 1200w" data-pswp-width="1200" data-pswp-height="900" data-pswp-src="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.jpg" data-pswp-alt="Sketch of the food map">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-200.jpg 200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-300.jpg 300w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-450.jpg 450w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-600.jpg 600w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-800.jpg 800w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.jpg 1200w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
+<source type="image/webp" srcset="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-200.webp 200w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-300.webp 300w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-450.webp 450w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-600.webp 600w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-800.webp 800w, /assets/images/bosquejo_mapa_comida-w-L8FePoMB-1200.webp 1200w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
+          <img src="/assets/images/bosquejo_mapa_comida-w-L8FePoMB-200.jpg" alt="Sketch of the food map" loading="lazy" decoding="async">
+        </picture>
+      </a>
+<p></figure></p>
 <p>The conceptualization of this work was done together with Sari Denisse, with whom I developed the portrayal of cyclical time centered on the cultivation and harvest of the milpa, and with whom I also decided on the exact orientation of the map. I then partnered for the design with the illustrator Kitzia Sámano Valencia. Working with Kitzia was an absolute pleasure, as we both enjoy focusing on nerd-level details, researching many references, and validating the designs together. She designed the food icons and the milpa with all its human and non-human characters.</p>
-<figure class="imagenIzq"><picture><source type="image/webp" srcset="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.webp 200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-300.webp 300w, /assets/images/comida_aframe_humano-4yWcMRsMaW-450.webp 450w, /assets/images/comida_aframe_humano-4yWcMRsMaW-600.webp 600w, /assets/images/comida_aframe_humano-4yWcMRsMaW-800.webp 800w, /assets/images/comida_aframe_humano-4yWcMRsMaW-1200.webp 1200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-11991.webp 11991w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
-<source type="image/jpeg" srcset="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.jpg 200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-300.jpg 300w, /assets/images/comida_aframe_humano-4yWcMRsMaW-450.jpg 450w, /assets/images/comida_aframe_humano-4yWcMRsMaW-600.jpg 600w, /assets/images/comida_aframe_humano-4yWcMRsMaW-800.jpg 800w, /assets/images/comida_aframe_humano-4yWcMRsMaW-1200.jpg 1200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-11991.jpg 11991w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
-<source type="image/png" srcset="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.png 200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-300.png 300w, /assets/images/comida_aframe_humano-4yWcMRsMaW-450.png 450w, /assets/images/comida_aframe_humano-4yWcMRsMaW-600.png 600w, /assets/images/comida_aframe_humano-4yWcMRsMaW-800.png 800w, /assets/images/comida_aframe_humano-4yWcMRsMaW-1200.png 1200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-11991.png 11991w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw"><img src="/assets/images/comida_aframe_humano-4yWcMRsMaW-11991.webp" alt="3D image of the map in VR simulation" loading="lazy" decoding="async"></picture><figcaption class="image-caption">I could see this in VR and walk around. I added a human figure here to get an idea of the intended size of the map when printed</figcaption></figure>
+<figure class="imagenIzq">
+      <a href="/assets/images/comida_aframe_humano-4yWcMRsMaW-2000.jpg" class="lightbox" data-pswp-srcset="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.jpg 200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-300.jpg 300w, /assets/images/comida_aframe_humano-4yWcMRsMaW-450.jpg 450w, /assets/images/comida_aframe_humano-4yWcMRsMaW-600.jpg 600w, /assets/images/comida_aframe_humano-4yWcMRsMaW-800.jpg 800w, /assets/images/comida_aframe_humano-4yWcMRsMaW-1200.jpg 1200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-2000.jpg 2000w" data-pswp-width="2000" data-pswp-height="1069" data-pswp-src="/assets/images/comida_aframe_humano-4yWcMRsMaW-2000.jpg" data-pswp-alt="3D image of the map in VR simulation">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.jpg 200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-300.jpg 300w, /assets/images/comida_aframe_humano-4yWcMRsMaW-450.jpg 450w, /assets/images/comida_aframe_humano-4yWcMRsMaW-600.jpg 600w, /assets/images/comida_aframe_humano-4yWcMRsMaW-800.jpg 800w, /assets/images/comida_aframe_humano-4yWcMRsMaW-1200.jpg 1200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-2000.jpg 2000w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
+<source type="image/webp" srcset="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.webp 200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-300.webp 300w, /assets/images/comida_aframe_humano-4yWcMRsMaW-450.webp 450w, /assets/images/comida_aframe_humano-4yWcMRsMaW-600.webp 600w, /assets/images/comida_aframe_humano-4yWcMRsMaW-800.webp 800w, /assets/images/comida_aframe_humano-4yWcMRsMaW-1200.webp 1200w, /assets/images/comida_aframe_humano-4yWcMRsMaW-2000.webp 2000w" sizes="(min-width: 575px) 50vw, (max-width: 575px) 100vw">
+          <img src="/assets/images/comida_aframe_humano-4yWcMRsMaW-200.jpg" alt="3D image of the map in VR simulation" loading="lazy" decoding="async">
+        </picture>
+      </a>
+      <figcaption class="image-caption">I could see this in VR and walk around. I added a human figure here to get an idea of the intended size of the map when printed</figcaption>
+    </figure>
 <p>This map is designed for a 4.4 m x 3.3 m wall, and that was a major challenge. It’s very difficult to imagine how something of that size will look from a monitor. To solve this problem, I turned to <a href="https://aframe.io/">A-Frame</a>, a tool that makes it easy to program (in HTML and JavaScript) virtual reality experiences viewable through a browser like Firefox. Using an old Oculus Quest 1, I was able to see the wall up close and from a distance, adjusting the size and position of the map elements. It also helped show the almost finished map to the people at Cencalli.</p>
 <p>When it came time to produce the final map, we were talking about 52K x 39K pixels, or just over 2,000 megapixels. The process of producing and merging those layers was not easy, and I documented it in a <a href="https://mirrodriguezlombardo.com/huge-images">tutorial</a>.</p>
 <p>To date, this map has not been printed, so this portfolio is the first time it has been published.</p>
@@ -317,9 +346,72 @@ Concept by Sari Denisse.</p>
       </div>
     </footer>
   
-  <!-- <script src="js/vendor.js"></script> -->
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
+
+    let deepZoomPlugin;
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".site-project-single-description", // Or any parent selector that contains your images
+      children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+      pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+
+      openPromise: () => {
+        // make sure it's initialized only once per lightbox
+        if (!deepZoomPlugin) {
+          return import ('../../../assets/js/photoswipe-deep-zoom-plugin.esm.js').then((deepZoomPluginModule) => {
+            deepZoomPlugin = new deepZoomPluginModule.default(lightbox, {
+              // deep zoom plugin options
+              tileSize: 256
+
+            });
+          })
+        }
+      },
+
+      wheelToZoom: true
+
+    });
+    lightbox.on("uiRegister", function () {
+      lightbox
+        .pswp
+        .ui
+        .registerElement({
+          name: "custom-caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          html: "Caption text",
+          onInit: (el, pswp) => {
+            lightbox
+              .pswp
+              .on("change", () => {
+                const currSlideElement = lightbox.pswp.currSlide.data.element;
+                let captionHTML = "";
+                if (currSlideElement) {
+                  const hiddenCaption = currSlideElement.querySelector(".image-caption");
+                  if (hiddenCaption) {
+                    // get caption from element with class hidden-caption-content
+                    captionHTML = hiddenCaption.innerHTML;
+                  } else {
+                    // get caption from alt attribute
+                    captionHTML = currSlideElement
+                      .querySelector("img")
+                      .getAttribute("alt");
+                  }
+                }
+                el.innerHTML = captionHTML || "";
+              });
+          }
+        });
+    });
+
+    lightbox.init();
+  </script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-subTitle: "MEXICO"
+país: "MEXICO"
 title: "Food of Mexican Cultures"
 date: 2022-11-16
 autor: "Mir Rodríguez Lombardo and Kitzia Sámano Valencia (see full credits below)"

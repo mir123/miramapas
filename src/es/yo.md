@@ -4,6 +4,5 @@ des: "Los mapas son una herramienta extraordinara para cambiar el mundo. En mi t
 lang: es
 imagen: heashot128_dither_alt.gif
 imagenHover: headshot_128_hover.png
+presentación: "Soy Mir Rodríguez Lombardo, cartógrafo"
 ---
-
-# Soy Mir Rodríguez Lombardo, cartógrafo

@@ -1,12 +1,15 @@
 ---
-subTitle: "Panamá - Comarca Emberá-Wounaan"
+país: "Panamá - Comarca Emberá-Wounaan"
 title: "Mapas para migrantes"
+subtítulo: "Recibiendo a los viajeros"
+
 date: 2024-03-01
 autor: "Mir Rodríguez Lombardo con Almanaque Azul y GeoIndigena"
 medio: "Impresión en vinil"
 dimensiones: "3 m × 1.8 m"
 cliente: "Almanaque Azul"
 fecha: "mayo de 2024"
+año: 2024
 img: "assets/images/projects/migrantes_570.jpg"
 linkText: "ver proyecto"
 lang: "es"
@@ -36,17 +39,17 @@ El saludo de bienvenida en el mapa está en emberá, que es lo que se habla en C
 
 Aparte de servir para darles la bienvenida a los visitantes, el diseño del mapa, que fue refinado por nuestra colega diseñadora Marilaura Cajar, estaba pensado para que funcionara lo más posible de manera no verbal y que la información fluyera fácilmente a personas que se encontraban en una situación extraña y difícil.
 
-{% imagen "assets/images/projects/migrantes_detalle_1.jpg", "Mapa de Canaan", "imagenFull" %}
+{% imagen "assets/images/projects/migrantes_detalle_1.jpg", "Detalle del mapa", "imagenFull" %}
 
 En el mapa de Bajo Chiquito sigo el principio de colocar el cuerpo de agua hacia abajo. Hace tiempo aprendí en mi trabajo de cartografía participativa que la gente que vive frente al agua (río, mar o lago) ve más natural el mapa con el agua hacia abajo. Eso fue cierto aquí también.
 
 <div class="row"> <div class="col">
 
-{% imagen "assets/images/projects/migrantes_detalle_2.jpg", "Mapa de Canaan", "imagenFull" %}
+{% imagen "assets/images/projects/migrantes_detalle_2.jpg", "Detalle del mapa", "imagenFull" %}
 
 </div> <div class="col">
 
-{% imagen "assets/images/projects/migrantes_detalle_3.jpg", "Mapa de Canaan", "imagenFull" %}
+{% imagen "assets/images/projects/migrantes_detalle_3.jpg", "Detalle del mapa", "imagenFull" %}
 
 </div></div>
 

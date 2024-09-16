@@ -9,10 +9,6 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-/>
 
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="/assets/vendor/slick/slick.css"/>
@@ -30,6 +26,11 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
+
+    
+
+    <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
+
   </head>
 
   <body>
@@ -55,17 +56,25 @@
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/yo">Me</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="yo">Me</a>
                   
                 </li>
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/portafolio">Portfolio</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="portafolio">Portfolio</a>
+                  
+                </li>
+              
+                <li class="nav-item">
+                  
+                  
+                  
+                  <a class="nav-link scroll-to" href="home">Inicio</a>
                   
                 </li>
               
@@ -73,14 +82,15 @@
 
                 
 
-                  <a  class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/es/contact/">
-                    <span id="botonLenguaje" data-lang="es" class="btn-area">
+                  <a class="nav-link boton" href="/es/contact/">
+                    <span id="botonLenguaje" data-lang="es">
                       <span data-text="Español">
-                        Español
+                        es
                       </span>
                     </span>
                   </a>
                 
+
               </li>
             </ul>
           </div>
@@ -89,20 +99,28 @@
     
 
     
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      document
+        .getElementById("escribeme")
+        .submit();
+    }
+  </script>
+
   <section class="site-contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
           <h1 class="site-contact-title">
             Don’t be shy. Say 
-            <span>Hello.</span>
+            <span></span>
           </h1>
         </div>
         <div class="col-lg-6 ml-auto">
           <div class="site-contact-form">
             <h4>Tell us about your project</h4>
-            <form method="POST" action="https://formspree.io/f/mgvwbolw">
+            <form id="escribeme" method="POST" action="https://formspree.io/f/mgvwbolw">
               <input name="subject" type="hidden" value="Message from Miramapas"/>
               <div class="row">
                 <div class="col-lg-6">
@@ -122,9 +140,9 @@
                 <textarea class="form-control" name="mensaje" id="aboutProject" rows="6" placeholder="What do you have in mind?"></textarea>
               </div>
               <div class="col-12">
-                <div class="g-recaptcha" data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG"></div>
+
                 <br/>
-                <button type="submit" class="btn btn-primary" formtarget="_blank">
+                <button data-callback='onSubmit' data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG" data-action='submit' type="submit" class="g-recaptcha btn btn-primary" formtarget="_blank">
                   <span class="btn-area">
                     <span data-text="Send Message">
                       Send Message
@@ -134,10 +152,7 @@
               </div>
             </div>
           </form>
-          <p class="contact-form-generator mt-3">
-            <strong>** </strong>
-            <a href="https://fabform.io/" target="_blank">Static website forms</a>
-          </p>
+
         </div>
       </div>
     </div>
@@ -243,9 +258,72 @@
       </div>
     </footer>
   
-  <!-- <script src="js/vendor.js"></script> -->
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
+
+    let deepZoomPlugin;
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".site-project-single-description", // Or any parent selector that contains your images
+      children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+      pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+
+      openPromise: () => {
+        // make sure it's initialized only once per lightbox
+        if (!deepZoomPlugin) {
+          return import ('../../../assets/js/photoswipe-deep-zoom-plugin.esm.js').then((deepZoomPluginModule) => {
+            deepZoomPlugin = new deepZoomPluginModule.default(lightbox, {
+              // deep zoom plugin options
+              tileSize: 256
+
+            });
+          })
+        }
+      },
+
+      wheelToZoom: true
+
+    });
+    lightbox.on("uiRegister", function () {
+      lightbox
+        .pswp
+        .ui
+        .registerElement({
+          name: "custom-caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          html: "Caption text",
+          onInit: (el, pswp) => {
+            lightbox
+              .pswp
+              .on("change", () => {
+                const currSlideElement = lightbox.pswp.currSlide.data.element;
+                let captionHTML = "";
+                if (currSlideElement) {
+                  const hiddenCaption = currSlideElement.querySelector(".image-caption");
+                  if (hiddenCaption) {
+                    // get caption from element with class hidden-caption-content
+                    captionHTML = hiddenCaption.innerHTML;
+                  } else {
+                    // get caption from alt attribute
+                    captionHTML = currSlideElement
+                      .querySelector("img")
+                      .getAttribute("alt");
+                  }
+                }
+                el.innerHTML = captionHTML || "";
+              });
+          }
+        });
+    });
+
+    lightbox.init();
+  </script>
+
 </body>
 </html>

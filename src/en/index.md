@@ -2,7 +2,7 @@
 layout: "layouts/homepage.njk"
 lang: en
 hero:
-  subTitle: ""
+  subtítulo: ""
   title:
     firstPara: "I MAKE MAPS"
     secondPara: "to tell stories"
@@ -14,7 +14,7 @@ hero:
     link: "contact"
 
 portfolio:
-  subTitle: "RECENT WORK"
+  subtítulo: "RECENT WORK"
   title: "The full spectrum from art to education, desk to forest, web to paper"
   seeAllbtn:
     link: "portfolio"

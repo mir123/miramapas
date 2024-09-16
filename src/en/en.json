@@ -3,7 +3,8 @@
   "navLogo": "/assets/images/logo.png",
   "navLinks": [
     ["me", "yo"],
-    ["portfolio", "portafolio"]
+    ["portfolio", "portafolio"],
+    ["inicio", "home"]
   ],
   "navBtnLink": "contact",
   "navBtnText": "Get in touch"

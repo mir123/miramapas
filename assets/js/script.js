@@ -43,14 +43,61 @@ $(document).ready(function () {
     $(".site-testimonial-item").removeClass("active");
   });
 
-  console.log("haciendo el onclick");
-
   $("#botonLenguaje").on("click", function (event) {
     console.log("clic en boton");
     const lang = $(this).data("lang");
     // const currentLang = getCookie("siteLanguage") || defaultLanguage; // Get current language
     const newLang = lang ? lang : "es"; // Toggle language between "es" and "en"
     setLanguage(newLang); // Set the new language
+  });
+
+  // Select all elements with the class "tituloFondo"
+  //const textContainers = document.querySelectorAll(".tituloFondo");
+
+  // Iterate over each element and apply the span wrapping
+  // textContainers.forEach((textContainer) => {
+  //   const text = textContainer.textContent.trim();
+  //   const words = text.split(/\s+/);
+  //   textContainer.innerHTML = words
+  //     .map((word) => `<span>${word}</span>`)
+  //     .join(" ");
+  // });
+
+  const textContainers = document.querySelectorAll(".tituloFondo");
+
+  // Function to wrap each word in a span tag
+  function wrapTextNodes(element) {
+    // Loop over all child nodes of the element
+    element.childNodes.forEach((node) => {
+      // Check if the node is a text node
+      if (node.nodeType === Node.TEXT_NODE) {
+        const text = node.textContent.trim();
+        if (text.length > 0) {
+          const words = text.split(/\s+/);
+          // Create a document fragment to hold the span-wrapped words
+          const fragment = document.createDocumentFragment();
+          words.forEach((word, index) => {
+            const span = document.createElement("span");
+            span.textContent = word;
+            fragment.appendChild(span);
+            // Add a space after each word, except the last one
+            // if (index < words.length - 1) {
+            //   fragment.appendChild(document.createTextNode(" "));
+            // }
+          });
+          // Replace the text node with the span-wrapped words
+          node.replaceWith(fragment);
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        // Recursively apply the same function to child elements
+        wrapTextNodes(node);
+      }
+    });
+  }
+
+  // Iterate over each "tituloFondo" container and apply the function
+  textContainers.forEach((textContainer) => {
+    wrapTextNodes(textContainer);
   });
 });
 

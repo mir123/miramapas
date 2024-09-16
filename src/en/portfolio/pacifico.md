@@ -1,5 +1,5 @@
 ---
-subTitle: "Colombia"
+país: "Colombia"
 title: "From the Pacific"
 date: 2024-04-01
 autor: "Mir Rodríguez Lombardo"

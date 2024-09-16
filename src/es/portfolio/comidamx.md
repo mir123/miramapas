@@ -1,20 +1,19 @@
 ---
-subTitle: "México"
-title: "Comidas de las culturas mexicanas"
+país: "México"
+title: "Comidas de las culturas de México"
+subtítulo: "Los alimentos nativos del territorio en un mapa mural"
+
 date: 2022-11-16
 autor: "Mir Rodríguez Lombardo y Kitzia Sámano Valencia (ver créditos completos abajo)"
 medio: "Inédito"
 dimensiones: "4.43 m × 3.32 m"
 cliente: "Cencalli, la casa del maíz y la cultura alimentaria (Secretaría de cultura de México)"
 fecha: "noviembre de 2022"
+año: 2022
 img: "assets/images/projects/mapa_comida_mexico_570.jpg"
 linkText: "ver proyecto"
-featureImg1: "/assets/images/projects/project-details-image-one.jpg"
-featureImg2: "/assets/images/projects/project-details-image-two.jpg"
 lang: "es"
 ---
-
-  <script src="/assets/js/openseadragon/openseadragon.min.js"></script>
 
 Este mapa fue idea que surgió de Genoveva de la Peña, que en ese entonces era la directora de _Cencalli, la casa del maíz y la cultura alimentaria_. Cencalli es un museo y centro cultural que forma parte de la Secreataría de Cultura de México y querían un mapa de comidas de México para poner en una de sus salas.
 
@@ -37,20 +36,15 @@ Hasta la fecha este mapa no ha sido impreso, así que este portafolio es la prim
 > Investigación por Alexander Ortega Sepúlveda y Mauricio Ávila Serratos,
 > Concepto por Sari Dennise.
 
-<div id="comidaMapaZoom" class="openseadragon" style="width: 95vw; height: 100vh; margin: 1em calc(50% - 50vw);"></div>
-
-<script type="text/javascript">
-    var viewer = OpenSeadragon({
-        id: "comidaMapaZoom",
-        prefixUrl: "/assets/js/openseadragon/images/",
-        tileSources: "/mosaicos/comida.dzi",
-            // visibilityRatio: 1.0,
-
-        defaultZoomLevel: 	0,
-        // minZoomLevel: 0,
-        maxZoomLevel:16,
-        // constrainDuringPan: true,
-        showNavigator: true,
-    navigatorPosition: "BOTTOM_LEFT",
-    });
-</script>
+{% imagen
+  "assets/images/projects/mapa_comida_mexico_final_07c_3000.jpg",
+  "Mapa de alimentos esenciales de las culturas de México",
+  "imagenFull",
+  "",
+  {
+    dataPswpTileType: "deepzoom",
+    dataPswpTileUrl: "/mosaicos/comida_files/{z}/{x}_{y}.jpg",
+    dataPswpMaxWidth: "52438",
+    dataPswpMaxHeight: "39213"
+  }
+%}

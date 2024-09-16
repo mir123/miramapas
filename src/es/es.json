@@ -2,8 +2,9 @@
   "lang": "es",
   "navLogo": "/assets/images/logo.png",
   "navLinks": [
-    ["yo", "yo"],
-    ["portafolio", "portafolio"]
+    ["yo", "#yo"],
+    ["portafolio", "#project"],
+    ["inicio", "#inicio"]
   ],
   "navBtnLink": "contact",
   "navBtnText": "Get in touch"

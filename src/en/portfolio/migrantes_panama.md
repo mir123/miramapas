@@ -1,5 +1,5 @@
 ---
-subTitle: "PANAMA - EMBERÁ-WOUNAAN COMARCA"
+país: "PANAMA - EMBERÁ-WOUNAAN COMARCA"
 title: "Maps for Migrants"
 date: 2024-03-01
 autor: "Mir Rodríguez Lombardo with Almanaque Azul"

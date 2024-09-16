@@ -9,10 +9,6 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-/>
 
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="/assets/vendor/slick/slick.css"/>
@@ -30,6 +26,11 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
+
+    
+
+    <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
+
   </head>
 
   <body>
@@ -55,17 +56,25 @@
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/yo">Me</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="yo">Me</a>
                   
                 </li>
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/portafolio">Portfolio</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="portafolio">Portfolio</a>
+                  
+                </li>
+              
+                <li class="nav-item">
+                  
+                  
+                  
+                  <a class="nav-link scroll-to" href="home">Inicio</a>
                   
                 </li>
               
@@ -73,14 +82,15 @@
 
                 
 
-                  <a  class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/es/portfolio/pacifico/">
-                    <span id="botonLenguaje" data-lang="es" class="btn-area">
+                  <a class="nav-link boton" href="/es/portfolio/pacifico/">
+                    <span id="botonLenguaje" data-lang="es">
                       <span data-text="Español">
-                        Español
+                        es
                       </span>
                     </span>
                   </a>
                 
+
               </li>
             </ul>
           </div>
@@ -95,8 +105,13 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
 
-          <figure class="imagenFull"><picture><source type="image/webp" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.webp 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.webp 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.webp 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.webp 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/jpeg" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.jpg 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.jpg 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.jpg 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.jpg 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/desde_el_pacifico_570-2yfASg2nqq-570.webp" alt="" loading="lazy" decoding="async"></picture></figure>
+          <figure class="imagenFull">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.jpg 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.jpg 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.jpg 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.jpg 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+<source type="image/webp" srcset="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.webp 200w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-300.webp 300w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-450.webp 450w, /assets/images/desde_el_pacifico_570-2yfASg2nqq-570.webp 570w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/desde_el_pacifico_570-2yfASg2nqq-200.jpg" alt="" loading="lazy" decoding="async">
+        </picture>
+        
+      </figure>
 
           
         </div>
@@ -105,15 +120,15 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <div class="site-project-single">
-            <h1>
-              <div class="tituloFondo port">
 
+            <div class="tituloFondo port">
+              <h1>
                 <span>
                   From the Pacific
                 </span>
+              </h1>
+            </div>
 
-              </div>
-            </h1>
             <ul class="fichaTecnica">
 
               <li>Digital Print</li>
@@ -149,8 +164,15 @@
 <blockquote>
 <p>This map talks about the Colombian and Panamanian territories from the point of view of the Pacific. I've noticed that those of us who grew up near water prefer to see maps with the sea (or the river) at the bottom and the town at the top. This is a more important and realistic reference than the north. That's why this map is oriented in that way. The land is represented with its watersheds, the landforms that capture water that falls or flows underground and channel it to creeks and rivers. Indigenous and Afro-descendant territories are part of a finer texture that requires closer examination. Just like streams, communities are a fundamental part of the territory's fabric, even if cities might seem more prominent. The attempt to map the threads woven into the land is merely an approximation. Only the people who live there truly know them, and it is their maps that tell the real stories of these territories.</p>
 </blockquote>
-<figure class="imagenFull"><picture><source type="image/webp" srcset="/assets/images/pacifico_foto_museo-6Wf07lhGpr-200.webp 200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-300.webp 300w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-450.webp 450w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-600.webp 600w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-800.webp 800w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1200.webp 1200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.webp 1600w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
-<source type="image/jpeg" srcset="/assets/images/pacifico_foto_museo-6Wf07lhGpr-200.jpg 200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-300.jpg 300w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-450.jpg 450w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-600.jpg 600w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-800.jpg 800w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1200.jpg 1200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.jpg 1600w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw"><img src="/assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.webp" alt="El mapa en la expo" loading="lazy" decoding="async"></picture></figure>
+<figure class="imagenFull">
+      <a href="/assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.jpg" class="lightbox" data-pswp-srcset="/assets/images/pacifico_foto_museo-6Wf07lhGpr-200.jpg 200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-300.jpg 300w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-450.jpg 450w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-600.jpg 600w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-800.jpg 800w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1200.jpg 1200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.jpg 1600w" data-pswp-width="1600" data-pswp-height="1200" data-pswp-src="/assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.jpg" data-pswp-alt="El mapa en la expo">
+        <picture>
+          <source type="image/jpeg" srcset="/assets/images/pacifico_foto_museo-6Wf07lhGpr-200.jpg 200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-300.jpg 300w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-450.jpg 450w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-600.jpg 600w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-800.jpg 800w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1200.jpg 1200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.jpg 1600w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+<source type="image/webp" srcset="/assets/images/pacifico_foto_museo-6Wf07lhGpr-200.webp 200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-300.webp 300w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-450.webp 450w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-600.webp 600w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-800.webp 800w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1200.webp 1200w, /assets/images/pacifico_foto_museo-6Wf07lhGpr-1600.webp 1600w" sizes="(min-width: 1200px) 730px, (min-width: 992px) 610px, (min-width: 768px) 690px, (min-width: 576px) 510px, (max-width: 575px) 420px,  50vw">
+          <img src="/assets/images/pacifico_foto_museo-6Wf07lhGpr-200.jpg" alt="El mapa en la expo" loading="lazy" decoding="async">
+        </picture>
+      </a>
+<p></figure></p>
 
             </div>
             
@@ -312,9 +334,72 @@
       </div>
     </footer>
   
-  <!-- <script src="js/vendor.js"></script> -->
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
+
+    let deepZoomPlugin;
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".site-project-single-description", // Or any parent selector that contains your images
+      children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+      pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+
+      openPromise: () => {
+        // make sure it's initialized only once per lightbox
+        if (!deepZoomPlugin) {
+          return import ('../../../assets/js/photoswipe-deep-zoom-plugin.esm.js').then((deepZoomPluginModule) => {
+            deepZoomPlugin = new deepZoomPluginModule.default(lightbox, {
+              // deep zoom plugin options
+              tileSize: 256
+
+            });
+          })
+        }
+      },
+
+      wheelToZoom: true
+
+    });
+    lightbox.on("uiRegister", function () {
+      lightbox
+        .pswp
+        .ui
+        .registerElement({
+          name: "custom-caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          html: "Caption text",
+          onInit: (el, pswp) => {
+            lightbox
+              .pswp
+              .on("change", () => {
+                const currSlideElement = lightbox.pswp.currSlide.data.element;
+                let captionHTML = "";
+                if (currSlideElement) {
+                  const hiddenCaption = currSlideElement.querySelector(".image-caption");
+                  if (hiddenCaption) {
+                    // get caption from element with class hidden-caption-content
+                    captionHTML = hiddenCaption.innerHTML;
+                  } else {
+                    // get caption from alt attribute
+                    captionHTML = currSlideElement
+                      .querySelector("img")
+                      .getAttribute("alt");
+                  }
+                }
+                el.innerHTML = captionHTML || "";
+              });
+          }
+        });
+    });
+
+    lightbox.init();
+  </script>
+
 </body>
 </html>

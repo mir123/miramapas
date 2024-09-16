@@ -1,13 +1,16 @@
 ---
-subTitle: "Abya Yala"
+país: "Abya Yala"
 title: "Abya Yala"
+subtítulo: "Explorando otras visiones del continente"
+
 date: 2019-04-01
 autor: "Mir Rodríguez Lombardo"
 medio: "Papel"
-dimensiones: "37 cm x 26.5 cm"
+dimensiones: "37 cm × 26.5 cm"
 cliente: "Revista de la Universidad de México"
 fecha: "abril de 2019"
-img: "assets/images/projects/abya_yala_thumb.png"
+año: 2019
+img: "assets/images/projects/abya_yala_thumb.jpg"
 linkText: "ver proyecto"
 lang: "es"
 ---

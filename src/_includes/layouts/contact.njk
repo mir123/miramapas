@@ -1,20 +1,28 @@
 {% extends "base.njk" %}
 
 {% block content %}
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      document
+        .getElementById("escribeme")
+        .submit();
+    }
+  </script>
+
   <section class="site-contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-5">
           <h1 class="site-contact-title">
             {{title}}
-            <span>{{subTitle}}</span>
+            <span>{{subtítulo}}</span>
           </h1>
         </div>
         <div class="col-lg-6 ml-auto">
           <div class="site-contact-form">
             <h4>{{formTitle}}</h4>
-            <form method="POST" action="https://formspree.io/f/mgvwbolw">
+            <form id="escribeme" method="POST" action="https://formspree.io/f/mgvwbolw">
               <input name="subject" type="hidden" value="Message from Miramapas"/>
               <div class="row">
                 <div class="col-lg-6">
@@ -34,9 +42,9 @@
                 <textarea class="form-control" name="mensaje" id="aboutProject" rows="6" placeholder="What do you have in mind?"></textarea>
               </div>
               <div class="col-12">
-                <div class="g-recaptcha" data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG"></div>
+
                 <br/>
-                <button type="submit" class="btn btn-primary" formtarget="_blank">
+                <button data-callback='onSubmit' data-sitekey="6Le8QT8qAAAAAHxpzTTYLABjezuEEYE3pzIfBhRG" data-action='submit' type="submit" class="g-recaptcha btn btn-primary" formtarget="_blank">
                   <span class="btn-area">
                     <span data-text="{{btnText}}">
                       {{btnText}}
@@ -46,10 +54,7 @@
               </div>
             </div>
           </form>
-          <p class="contact-form-generator mt-3">
-            <strong>** </strong>
-            <a href="https://fabform.io/" target="_blank">Static website forms</a>
-          </p>
+
         </div>
       </div>
     </div>

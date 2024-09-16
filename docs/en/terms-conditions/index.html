@@ -9,10 +9,6 @@
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-/>
 
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="/assets/vendor/slick/slick.css"/>
@@ -30,6 +26,11 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
     <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon"/>
+
+    
+
+    <link rel="stylesheet" href="/assets/css/photoswipe.css"/>
+
   </head>
 
   <body>
@@ -55,17 +56,25 @@
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/yo">Me</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="yo">Me</a>
                   
                 </li>
               
                 <li class="nav-item">
                   
-                    
-                    
-                    <a class="nav-link" href="/en/portafolio">Portfolio</a>
+                  
+                  
+                  <a class="nav-link scroll-to" href="portafolio">Portfolio</a>
+                  
+                </li>
+              
+                <li class="nav-item">
+                  
+                  
+                  
+                  <a class="nav-link scroll-to" href="home">Inicio</a>
                   
                 </li>
               
@@ -73,14 +82,15 @@
 
                 
 
-                  <a  class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/es/terms-conditions/">
-                    <span id="botonLenguaje" data-lang="es" class="btn-area">
+                  <a class="nav-link boton" href="/es/terms-conditions/">
+                    <span id="botonLenguaje" data-lang="es">
                       <span data-text="Español">
-                        Español
+                        es
                       </span>
                     </span>
                   </a>
                 
+
               </li>
             </ul>
           </div>
@@ -249,9 +259,72 @@
       </div>
     </footer>
   
-  <!-- <script src="js/vendor.js"></script> -->
   <script src="/assets/vendor/jQuery/jquery.min.js"></script>
   <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
   <script src="/assets/js/script.js"></script>
+
+  <script type="module">
+    import PhotoSwipeLightbox from '../../../assets/js/photoswipe-lightbox.esm.js';
+
+    let deepZoomPlugin;
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: ".site-project-single-description", // Or any parent selector that contains your images
+      children: ".lightbox", // This selects all anchors with class 'lightbox' within the gallery
+      pswpModule: () => import ('../../../assets/js/photoswipe.esm.js'),
+
+      openPromise: () => {
+        // make sure it's initialized only once per lightbox
+        if (!deepZoomPlugin) {
+          return import ('../../../assets/js/photoswipe-deep-zoom-plugin.esm.js').then((deepZoomPluginModule) => {
+            deepZoomPlugin = new deepZoomPluginModule.default(lightbox, {
+              // deep zoom plugin options
+              tileSize: 256
+
+            });
+          })
+        }
+      },
+
+      wheelToZoom: true
+
+    });
+    lightbox.on("uiRegister", function () {
+      lightbox
+        .pswp
+        .ui
+        .registerElement({
+          name: "custom-caption",
+          order: 9,
+          isButton: false,
+          appendTo: "root",
+          html: "Caption text",
+          onInit: (el, pswp) => {
+            lightbox
+              .pswp
+              .on("change", () => {
+                const currSlideElement = lightbox.pswp.currSlide.data.element;
+                let captionHTML = "";
+                if (currSlideElement) {
+                  const hiddenCaption = currSlideElement.querySelector(".image-caption");
+                  if (hiddenCaption) {
+                    // get caption from element with class hidden-caption-content
+                    captionHTML = hiddenCaption.innerHTML;
+                  } else {
+                    // get caption from alt attribute
+                    captionHTML = currSlideElement
+                      .querySelector("img")
+                      .getAttribute("alt");
+                  }
+                }
+                el.innerHTML = captionHTML || "";
+              });
+          }
+        });
+    });
+
+    lightbox.init();
+  </script>
+
 </body>
 </html>
