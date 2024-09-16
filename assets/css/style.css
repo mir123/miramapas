@@ -1091,8 +1091,19 @@ video {
 .site-about-company {
   background: #4049ff;
   width: 40%;
-  padding: 70px 38px;
+  padding: 40px 38px;
+  font-family: "Routed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #e0e0e0;
 }
+
+.site-about-company p {
+  font-size: 2em;
+  padding: 40px 0px 0px 0px;
+  margin: 0;
+}
+
 @media (max-width: 991px) {
   .site-about-company {
     width: 100%;
