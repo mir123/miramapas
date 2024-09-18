@@ -75,8 +75,27 @@ h6 {
   height: 0px;
 }
 
+@media (max-width: 575px) {
+  .tituloFondo span {
+    padding: 2px 6px;
+  }
+
+  .tituloFondo h1 {
+    font-size: 30px;
+  }
+
+  .tituloFondo h2 {
+    font-size: 20px;
+  }
+
+  .tituloFondo h2 span {
+    padding: 2px 4px;
+  }
+}
+
 .site-hero-content .tituloFondo {
-  bottom: 150px;
+  bottom: 50px;
+  position: relative;
 }
 
 p {
@@ -119,18 +138,17 @@ ul {
   font-family: "Routed", sans-serif;
   border: none;
   color: #e7e7e7 !important;
-  padding: 20px 45px;
-  border-radius: 0;
+  border-radius: 5px;
 }
 .btn:focus {
   box-shadow: none;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .btn {
     padding: 17px 40px;
   }
-}
+} */
 .btn .btn-area {
   display: block;
   overflow: hidden;
@@ -193,7 +211,7 @@ body {
 }
 
 .section-title {
-  margin-bottom: 70px;
+  margin: 50px 0px;
 }
 @media (max-width: 991px) {
   .section-title {
@@ -417,7 +435,7 @@ textarea.form-control {
 
 .site-hero {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 131px);
   background-image: url("../images/backgrounds/pacifico_1920_cubic.jpg");
   background-size: cover;
   background-position: center center;
@@ -449,7 +467,7 @@ textarea.form-control {
 
 @media (max-width: 991px) {
   .site-hero {
-    height: auto;
+    /* height: auto; */
     padding: 200px 0;
   }
 }
@@ -465,8 +483,9 @@ textarea.form-control {
   }
 }
 .site-hero-content-buttons {
-  margin: 0;
   padding: 0;
+  top: 100px;
+  position: relative;
 }
 .site-hero-content-buttons li {
   display: inline-block;
@@ -490,7 +509,7 @@ textarea.form-control {
 }
 @media (max-width: 575px) {
   .site-hero-content-buttons li .btn {
-    width: 90%;
+    width: fit-content;
     margin: 0 auto;
     display: block;
   }
@@ -534,7 +553,7 @@ textarea.form-control {
 
 .site-project,
 .site-blog {
-  padding: 120px 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 .site-project-item,
@@ -1030,6 +1049,7 @@ video {
 @media (min-width: 1200px) {
   .container {
     max-width: fit-content;
+    /* height: inherit */
   }
 
   .container > * {
@@ -1235,6 +1255,23 @@ figcaption {
   text-align: center;
   font-size: 95%;
   padding: 10px 0 0 0;
+}
+
+.watermark {
+  position: realtive;
+  top: 0px;
+}
+
+.watermark img {
+  width: 10%;
+  opacity: 50%;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.contenedor-imagenes {
+  position: relative;
 }
 
 .pswp__custom-caption {
