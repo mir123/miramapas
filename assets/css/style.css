@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   color: #9d9ea5;
   /* display: none; */
+  background: #2d2d2d;
 }
 
 h1,
@@ -30,17 +31,33 @@ h6 {
   color: #e0e0e0;
 }
 
+.portadita {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  /* top: 100px; */
+}
+
+.portadita .picture {
+  height: 200px;
+  overflow: hidden;
+}
+
 .tituloFondo {
   word-spacing: -20px;
-  bottom: 50px;
-  position: absolute;
+  /* bottom: 50px;
+  position: absolute; */
   margin: 20px;
+  position: relative;
+
+  z-index: 10;
 }
 
 .tituloFondo span {
-  background-color: #3f3200;
+  background-color: #ffe115;
   display: inline-block;
   padding: 6px;
+  margin: 5px;
 }
 
 .tituloFondo h1 {
@@ -53,10 +70,11 @@ h6 {
   /* margin-top: 20px;
   margin-bottom: 10px; */
   /* margin-left: 30px; */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); */
   /* top: -200px;
   position: relative; */
   height: 0px;
+  color: #1f1ac2;
 }
 
 .tituloFondo h2 {
@@ -204,10 +222,6 @@ ul {
 }
 .btn-secondary:hover {
   background: #828a29;
-}
-
-body {
-  background: #2d2d2d;
 }
 
 .section-title {
@@ -467,7 +481,7 @@ textarea.form-control {
 
 @media (max-width: 991px) {
   .site-hero {
-    /* height: auto; */
+    height: auto;
     padding: 200px 0;
   }
 }
@@ -766,7 +780,7 @@ textarea.form-control {
 }
 @media (max-width: 767px) {
   .site-project-single-section {
-    padding: 25px 0;
+    padding: 5px 0;
   }
 }
 /* .site-project-item h1,
@@ -1249,6 +1263,15 @@ video {
 .imagenExtraLarge {
   width: 90vw;
   margin-left: calc(50% - 45vw);
+}
+
+.imagenFondo {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: 50% top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 100px 0 0 0;
 }
 
 figcaption {

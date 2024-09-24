@@ -78,6 +78,7 @@ $(document).ready(function () {
           const fragment = document.createDocumentFragment();
           words.forEach((word, index) => {
             const span = document.createElement("span");
+            span.style.marginRight = Math.random() * 10 + 3 + "px";
             span.textContent = word;
             fragment.appendChild(span);
             // Add a space after each word, except the last one
